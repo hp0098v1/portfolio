@@ -1,6 +1,6 @@
 'use client';
 
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -16,7 +16,7 @@ export function NavLink({ title, href }: Props) {
   return (
     <Link
       href={href}
-      className={clsx(
+      className={cn(
         'hover:text-primary transition-colors',
         isActive ? 'text-primary' : 'text-foreground'
       )}

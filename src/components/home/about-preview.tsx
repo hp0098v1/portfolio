@@ -9,7 +9,7 @@ export function AboutPreview() {
         <div className='flex justify-between items-center mb-8'>
           <h2 className='text-3xl font-bold'>About</h2>
           <Button asChild variant='link'>
-            <Link href='/projects'>Learn more →</Link>
+            <Link href='/about'>Learn more →</Link>
           </Button>
         </div>
         <Card>
