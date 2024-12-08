@@ -1,9 +1,11 @@
 'use client';
 
-import { NavLink } from '@/components/shared/nav-link';
-import { navLinks } from '@/constants';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+
+import { NavLink } from '@/components/shared/nav-link';
+import { navLinks } from '@/constants';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,30 +32,16 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className='md:hidden text-gray-300 hover:text-accent'
+            className='md:hidden hover:text-primary'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg
-              className='h-6 w-6'
-              fill='none'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              viewBox='0 0 24 24'
-              stroke='currentColor'
-            >
-              {isMenuOpen ? (
-                <path d='M6 18L18 6M6 6l12 12' />
-              ) : (
-                <path d='M4 6h16M4 12h16M4 18h16' />
-              )}
-            </svg>
+            {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className='md:hidden py-4'>
+          <div className='absolute top-12 md:hidden py-4 backdrop-blur-sm z-50 w-full'>
             <div className='flex flex-col space-y-4'>
               {navLinks.map((link) => (
                 <NavLink
