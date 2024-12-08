@@ -1,5 +1,5 @@
 import { projects } from '@/constants';
-import { ProjectCard } from '@/app/projects/_components/project-card';
+import { ProjectCard } from '@/app/(fade-in-animate)/projects/_components/project-card';
 
 export default function ProjectsPage() {
   return (
