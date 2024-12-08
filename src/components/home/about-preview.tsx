@@ -6,7 +6,12 @@ export function AboutPreview() {
   return (
     <section className='py-20 px-4'>
       <div className='max-w-4xl mx-auto'>
-        <h2 className='text-3xl font-bold mb-8'>About Me</h2>
+        <div className='flex justify-between items-center mb-8'>
+          <h2 className='text-3xl font-bold'>About</h2>
+          <Button asChild variant='link'>
+            <Link href='/projects'>Learn more →</Link>
+          </Button>
+        </div>
         <Card>
           <CardContent className='p-6'>
             <p className='text-muted-foreground leading-relaxed mb-8'>

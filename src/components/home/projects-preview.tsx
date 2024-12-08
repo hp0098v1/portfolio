@@ -36,28 +36,9 @@ export function ProjectsPreview() {
                   ))}
                 </div>
                 <div className='flex gap-4'>
-                  {project.link && (
-                    <Button asChild size='sm' variant='default'>
-                      <a
-                        href={project.link}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        Live Demo
-                      </a>
-                    </Button>
-                  )}
-                  {project.github && (
-                    <Button asChild size='sm' variant='outline'>
-                      <a
-                        href={project.github}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                      >
-                        GitHub
-                      </a>
-                    </Button>
-                  )}
+                  <Button asChild size='sm' variant='outline'>
+                    <Link href={`/projects/${project.id}`}>Learn More</Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>

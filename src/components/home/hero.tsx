@@ -1,6 +1,7 @@
 import { socialLinks } from '@/constants';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Github, Linkedin } from 'lucide-react';
 
 export function Hero() {
   return (
@@ -23,7 +24,7 @@ export function Hero() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              GitHub
+              <Github /> GitHub
             </a>
           </Button>
           <Button asChild variant='outline'>
@@ -32,7 +33,7 @@ export function Hero() {
               target='_blank'
               rel='noopener noreferrer'
             >
-              LinkedIn
+              <Linkedin /> LinkedIn
             </a>
           </Button>
         </div>

@@ -1,5 +1,8 @@
 'use client';
 
+import { useState } from 'react';
+import { Github, Linkedin } from 'lucide-react';
+
 import { socialLinks } from '@/constants';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,13 +15,11 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { useState } from 'react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
 
@@ -63,6 +64,8 @@ export function Contact() {
               <div>
                 <h3 className='font-semibold mb-2'>Location</h3>
                 <p className='text-muted-foreground'>
+                  {socialLinks.location}
+                  <br />
                   Available for Remote Work
                 </p>
               </div>
@@ -73,7 +76,7 @@ export function Contact() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    GitHub
+                    <Github /> GitHub
                   </a>
                 </Button>
                 <Button asChild variant='outline'>
@@ -82,7 +85,7 @@ export function Contact() {
                     target='_blank'
                     rel='noopener noreferrer'
                   >
-                    LinkedIn
+                    <Linkedin /> LinkedIn
                   </a>
                 </Button>
               </div>
@@ -116,17 +119,6 @@ export function Contact() {
                     id='email'
                     name='email'
                     value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <div className='space-y-2'>
-                  <Label htmlFor='subject'>Subject</Label>
-                  <Input
-                    id='subject'
-                    name='subject'
-                    value={formData.subject}
                     onChange={handleChange}
                     required
                   />

@@ -17,11 +17,11 @@ export const navLinks = [
 ];
 
 export const socialLinks = {
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  github: "https://github.com/hp0098v1",
+  linkedin: "https://linkedin.com/in/hp0098v1",
   twitter: "https://twitter.com/yourusername",
-  email: "your.email@example.com",
-  location: "Your City, Country",
+  email: "hp0098v1@gmail.com",
+  location: "Golestan, Iran",
 };
 
 export const skills = {
