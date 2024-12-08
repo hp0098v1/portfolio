@@ -28,7 +28,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className='min-h-screen bg-primary text-white py-20 px-4'>
+    <main className='min-h-screen  py-20 px-4'>
       <div className='max-w-4xl mx-auto'>
         <h1 className='text-4xl font-bold mb-8'>Contact Me</h1>
 
