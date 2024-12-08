@@ -28,31 +28,30 @@ export const skills = {
   languages: [
     "JavaScript",
     "TypeScript",
-    "Python",
     "HTML5",
     "CSS3",
-    "SQL",
   ],
   frameworks: [
     "React.js",
     "Next.js",
-    "Node.js",
-    "Express.js",
+    "Zustand",
+    "React Query",
+    "React Hook Form",
     "Tailwind CSS",
+    "Shadcn UI",
     "Material UI",
   ],
   tools: [
     "Git",
     "GitHub",
     "VS Code",
+    "Vim",
     "Figma",
-    "Docker",
-    "Webpack",
+    "Docker"
   ],
   databases: [
     "MongoDB",
     "PostgreSQL",
-    "Redis",
   ],
   other: [
     "RESTful APIs",
@@ -117,3 +116,14 @@ export const projects = [
     ],
   },
 ];
+
+export const education = [
+  {
+    id: '1',
+    degree: 'Bachelor in Computer Science',
+    university: 'MahmoodAbad University',
+    startTime: '2021',
+    endTime: 'persent',
+    description: 'Focused on web development and software engineering principles. Participated in various hackathons and coding competitions.'
+  }
+]
