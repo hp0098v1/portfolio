@@ -2,6 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/constants';
 import { Github, Monitor } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -27,6 +28,15 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         >
           ← Back to Projects
         </Link>
+
+        <div className='w-full h-96 md:h-[34rem] relative mb-8'>
+          <Image
+            src={project.image}
+            alt={project.title}
+            className='rounded-lg shadow-lg object-cover object-center'
+            fill
+          />
+        </div>
 
         <h1 className='text-4xl font-bold mb-6'>{project.title}</h1>
         <p className='text-xl text-gray-300 mb-8'>{project.longDescription}</p>

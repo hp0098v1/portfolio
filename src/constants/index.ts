@@ -71,7 +71,7 @@ export const projects = [
     description: "A full-featured e-commerce platform built with Next.js and TypeScript",
     longDescription: "A comprehensive e-commerce solution featuring user authentication, product management, shopping cart functionality, and secure payment processing. Built with performance and scalability in mind.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-    image: "/project1.png",
+    image: "/project.png",
     link: "#",
     github: "#",
     features: [
@@ -88,7 +88,7 @@ export const projects = [
     description: "A collaborative task management application with real-time updates",
     longDescription: "A real-time task management application that allows teams to collaborate effectively. Features include real-time updates, task assignment, progress tracking, and team communication.",
     tech: ["React", "Firebase", "Tailwind CSS", "Socket.io"],
-    image: "/project2.png",
+    image: "/project.png",
     link: "#",
     github: "#",
     features: [
@@ -105,7 +105,7 @@ export const projects = [
     description: "A minimal and modern portfolio website showcasing my work",
     longDescription: "A personal portfolio website built with modern web technologies. Features a clean, minimal design with smooth animations and responsive layout.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: "/project3.png",
+    image: "/project.png",
     link: "#",
     github: "#",
     features: [
