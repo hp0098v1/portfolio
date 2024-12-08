@@ -1,6 +1,18 @@
 'use client';
 
+import { Button } from '@/components/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import { socialLinks } from '@/constants';
+import { Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
 
 export default function ContactPage() {
@@ -35,121 +47,104 @@ export default function ContactPage() {
         <div className='grid md:grid-cols-2 gap-12'>
           {/* Contact Information */}
           <div>
-            <div className='bg-secondary p-8 rounded-lg mb-8'>
-              <h2 className='text-2xl font-bold mb-6 text-accent'>
-                Contact Information
-              </h2>
+            <div className='bg-card text-card-foreground p-8 rounded-lg mb-8'>
+              <h2 className='text-2xl font-bold mb-6'>Contact Information</h2>
               <div className='space-y-4'>
                 <div>
                   <h3 className='text-lg font-bold mb-2'>Email</h3>
                   <a
                     href={`mailto:${socialLinks.email}`}
-                    className='text-gray-300 hover:text-accent transition-colors'
+                    className='transition-colors hover:text-primary'
                   >
                     {socialLinks.email}
                   </a>
                 </div>
                 <div>
                   <h3 className='text-lg font-bold mb-2'>Location</h3>
-                  <p className='text-gray-300'>Available for Remote Work</p>
+                  <p>
+                    {socialLinks.location}
+                    <br /> Available for Remote Work
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className='bg-secondary p-8 rounded-lg'>
-              <h2 className='text-2xl font-bold mb-6 text-accent'>
-                Connect With Me
-              </h2>
+            <div className='bg-card text-card-foreground p-8 rounded-lg'>
+              <h2 className='text-2xl font-bold mb-6 '>Connect With Me</h2>
               <div className='space-y-4'>
-                <a
-                  href={socialLinks.github}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex items-center text-gray-300 hover:text-accent transition-colors'
-                >
-                  <span className='text-lg'>GitHub</span>
-                </a>
-                <a
-                  href={socialLinks.linkedin}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='flex items-center text-gray-300 hover:text-accent transition-colors'
-                >
-                  <span className='text-lg'>LinkedIn</span>
-                </a>
+                <Button asChild variant='outline'>
+                  <a
+                    href={socialLinks.github}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <Github /> GitHub
+                  </a>
+                </Button>
+                <Button asChild variant='outline'>
+                  <a
+                    href={socialLinks.linkedin}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    <Linkedin /> LinkedIn
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className='bg-secondary p-8 rounded-lg'>
-            <h2 className='text-2xl font-bold mb-6 text-accent'>
-              Send a Message
-            </h2>
-            <form onSubmit={handleSubmit} className='space-y-6'>
-              <div>
-                <label
-                  htmlFor='name'
-                  className='block text-sm font-medium mb-2'
-                >
-                  Name
-                </label>
-                <input
-                  type='text'
-                  id='name'
-                  name='name'
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className='w-full px-4 py-2 rounded-lg bg-primary text-white border border-gray-600 focus:border-accent focus:outline-none'
-                />
-              </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Send a Message</CardTitle>
+              <CardDescription>
+                I&apos;ll get back to you as soon as possible
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className='space-y-4'>
+                <div className='space-y-2'>
+                  <Label htmlFor='name'>Name</Label>
+                  <Input
+                    id='name'
+                    name='name'
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div>
-                <label
-                  htmlFor='email'
-                  className='block text-sm font-medium mb-2'
-                >
-                  Email
-                </label>
-                <input
-                  type='email'
-                  id='email'
-                  name='email'
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className='w-full px-4 py-2 rounded-lg bg-primary text-white border border-gray-600 focus:border-accent focus:outline-none'
-                />
-              </div>
+                <div className='space-y-2'>
+                  <Label htmlFor='email'>Email</Label>
+                  <Input
+                    type='email'
+                    id='email'
+                    name='email'
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
 
-              <div>
-                <label
-                  htmlFor='message'
-                  className='block text-sm font-medium mb-2'
-                >
-                  Message
-                </label>
-                <textarea
-                  id='message'
-                  name='message'
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className='w-full px-4 py-2 rounded-lg bg-primary text-white border border-gray-600 focus:border-accent focus:outline-none resize-none'
-                />
-              </div>
+                <div className='space-y-2'>
+                  <Label htmlFor='message'>Message</Label>
+                  <Textarea
+                    id='message'
+                    name='message'
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                  />
+                </div>
 
-              <button
-                type='submit'
-                className='w-full bg-accent text-primary font-bold py-3 px-6 rounded-lg hover:bg-accent-light transition-colors'
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+                <Button type='submit' className='w-full'>
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </main>
