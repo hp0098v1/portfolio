@@ -1,4 +1,4 @@
-import { skills, projects, socialLinks } from '@/constants';
+import { projects, socialLinks } from '@/constants';
 import Link from 'next/link';
 
 export default function Home() {
@@ -56,50 +56,28 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id='about' className='py-20 px-4 bg-secondary'>
+      <section id='about' className='py-20 px-4 '>
         <div className='max-w-4xl mx-auto'>
           <h2 className='text-3xl font-bold mb-8'>About Me</h2>
-          <p className='text-gray-300 leading-relaxed mb-8'>
-            I&apos;m a passionate frontend developer with a keen eye for design
-            and a commitment to creating intuitive user experiences. With a
-            strong foundation in modern web technologies, I transform ideas into
-            clean, efficient, and scalable code.
-          </p>
-          <Link
-            href='/about'
-            className='text-accent hover:text-accent-light transition-colors'
-          >
-            Learn more about me →
-          </Link>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id='skills' className='py-20 px-4'>
-        <div className='max-w-4xl mx-auto'>
-          <h2 className='text-3xl font-bold mb-8'>Skills</h2>
-          {Object.entries(skills).map(([category, categorySkills]) => (
-            <div key={category} className='mb-8'>
-              <h3 className='text-xl font-bold mb-4 capitalize text-accent'>
-                {category}
-              </h3>
-              <div className='flex flex-wrap gap-2'>
-                {categorySkills.map((skill, index) => (
-                  <div
-                    key={index}
-                    className='bg-secondary p-2 rounded-lg text-center hover:bg-accent hover:text-primary transition-colors'
-                  >
-                    {skill}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+          <div className='bg-secondary p-6 rounded-lg'>
+            <p className='text-gray-300 leading-relaxed mb-8'>
+              I&apos;m a passionate frontend developer with a keen eye for
+              design and a commitment to creating intuitive user experiences.
+              With a strong foundation in modern web technologies, I transform
+              ideas into clean, efficient, and scalable code.
+            </p>
+            <Link
+              href='/about'
+              className='text-accent hover:text-accent-light transition-colors'
+            >
+              Learn more about me →
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Projects Section */}
-      <section id='projects' className='py-20 px-4 bg-secondary'>
+      <section id='projects' className='py-20 px-4'>
         <div className='max-w-4xl mx-auto'>
           <div className='flex justify-between items-center mb-8'>
             <h1 className='text-4xl font-bold'>Projects</h1>
@@ -112,14 +90,14 @@ export default function Home() {
           </div>
           <div className='grid md:grid-cols-2 gap-6'>
             {projects.slice(0, 2).map((project) => (
-              <div key={project.id} className='bg-primary p-6 rounded-lg'>
+              <div key={project.id} className='bg-secondary p-6 rounded-lg'>
                 <h3 className='text-xl font-bold mb-2'>{project.title}</h3>
                 <p className='text-gray-300 mb-4'>{project.description}</p>
                 <div className='flex flex-wrap gap-2 mb-4'>
                   {project.tech.slice(0, 3).map((tech, index) => (
                     <span
                       key={index}
-                      className='bg-secondary px-3 py-1 rounded-full text-sm'
+                      className='bg-primary px-3 py-1 rounded-full text-sm'
                     >
                       {tech}
                     </span>
@@ -146,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id='contact' className='py-20 px-4'>
+      <section id='contact' className='py-20 px-4 '>
         <div className='max-w-4xl mx-auto'>
           <h2 className='text-3xl font-bold mb-8'>Get in Touch</h2>
           <div className='bg-secondary p-8 rounded-lg'>
@@ -192,7 +170,7 @@ export default function Home() {
                   <input
                     type='text'
                     id='name'
-                    className='w-full p-2 rounded bg-primary border border-gray-700 focus:border-accent outline-none'
+                    className='w-full px-4 py-2 rounded-lg bg-primary text-white border border-gray-600 focus:border-accent focus:outline-none'
                   />
                 </div>
                 <div>
@@ -202,7 +180,7 @@ export default function Home() {
                   <input
                     type='email'
                     id='email'
-                    className='w-full p-2 rounded bg-primary border border-gray-700 focus:border-accent outline-none'
+                    className='w-full px-4 py-2 rounded-lg bg-primary text-white border border-gray-600 focus:border-accent focus:outline-none'
                   />
                 </div>
                 <div>
@@ -212,7 +190,7 @@ export default function Home() {
                   <textarea
                     id='message'
                     rows={4}
-                    className='w-full p-2 rounded bg-primary border border-gray-700 focus:border-accent outline-none'
+                    className='w-full px-4 py-2 rounded-lg bg-primary text-white border border-gray-600 focus:border-accent focus:outline-none resize-none'
                   ></textarea>
                 </div>
                 <button

@@ -1,3 +1,4 @@
+import Navbar from '@/components/Navbar';
 import './globals.css';
 
 import type { Metadata } from 'next';
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${spaceMono.variable}  antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
