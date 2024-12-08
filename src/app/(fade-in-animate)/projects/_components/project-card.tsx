@@ -35,7 +35,7 @@ export function ProjectCard({
           ))}
         </div>
 
-        <div className='flex gap-4'>
+        <div className='flex flex-wrap gap-4'>
           <Button asChild>
             <Link href={`/projects/${id}`}>
               <BookOpen /> View Details
