@@ -1,4 +1,7 @@
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { projects } from '@/constants';
+import { Github, Monitor } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -20,7 +23,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       <div className='max-w-4xl mx-auto'>
         <Link
           href='/projects'
-          className='text-accent hover:text-accent-light mb-8 inline-block'
+          className='text-primary hover:underline underline-offset-4 mb-8 inline-block'
         >
           ← Back to Projects
         </Link>
@@ -32,12 +35,13 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           <h2 className='text-2xl font-bold mb-4'>Technologies Used</h2>
           <div className='flex flex-wrap gap-2'>
             {project.tech.map((tech, index) => (
-              <span
+              <Badge
+                className='px-4 py-2 text-base'
+                variant='secondary'
                 key={index}
-                className='bg-secondary px-4 py-2 rounded-lg text-sm'
               >
                 {tech}
-              </span>
+              </Badge>
             ))}
           </div>
         </div>
@@ -52,22 +56,17 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </div>
 
         <div className='flex gap-4'>
-          <a
-            href={project.github}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='bg-accent hover:bg-accent-light text-primary px-8 py-3 rounded-lg transition-colors'
-          >
-            View on GitHub
-          </a>
-          <a
-            href={project.link}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='bg-secondary hover:bg-accent hover:text-primary px-8 py-3 rounded-lg transition-colors'
-          >
-            Live Demo
-          </a>
+          <Button variant='outline' asChild>
+            <a href={project.github} target='_blank' rel='noopener noreferrer'>
+              <Github />
+              Github
+            </a>
+          </Button>
+          <Button variant='outline' asChild>
+            <a href={project.link} target='_blank' rel='noopener noreferrer'>
+              <Monitor /> Live Demo
+            </a>
+          </Button>
         </div>
       </div>
     </main>
