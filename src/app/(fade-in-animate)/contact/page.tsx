@@ -1,16 +1,6 @@
-'use client';
-
+import { ContactInformation } from '@/app/(fade-in-animate)/contact/_components/contact-information';
+import { SocialLinks } from '@/app/(fade-in-animate)/contact/_components/social-links';
 import { ContactForm } from '@/components/shared/contact-form';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-
-import { socialLinks } from '@/constants';
-import { Github, Linkedin } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -20,63 +10,10 @@ export default function ContactPage() {
 
         <div className='grid md:grid-cols-2 gap-12'>
           <div className='space-y-8'>
-            {/* Contact Information */}
-            <Card>
-              <CardHeader>
-                <CardTitle className='text-2xl font-bold'>
-                  Contact Information
-                </CardTitle>
-              </CardHeader>
-              <CardContent className='space-y-4'>
-                <div>
-                  <h3 className='text-lg font-bold mb-2'>Email</h3>
-                  <a
-                    href={`mailto:${socialLinks.email}`}
-                    className='transition-colors hover:text-primary'
-                  >
-                    {socialLinks.email}
-                  </a>
-                </div>
-                <div>
-                  <h3 className='text-lg font-bold mb-2'>Location</h3>
-                  <p>
-                    {socialLinks.location}
-                    <br /> Available for Remote Work
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            
+        <ContactInformation />
 
-            <Card>
-              {/* Social Links */}
-              <CardHeader>
-                <CardTitle className='text-2xl font-bold'>
-                  Connect With Me
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className='space-y-4'>
-                  <Button asChild variant='outline'>
-                    <a
-                      href={socialLinks.github}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <Github /> GitHub
-                    </a>
-                  </Button>
-                  <Button asChild variant='outline'>
-                    <a
-                      href={socialLinks.linkedin}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
-                      <Linkedin /> LinkedIn
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
+            <SocialLinks />
           </div>
 
           <ContactForm />

@@ -1,7 +1,7 @@
-import { Background } from '@/components/about/background';
-import { Education } from '@/components/about/education';
-import { Experience } from '@/components/about/experience';
-import { Skills } from '@/components/about/skills';
+import { Background } from '@/app/(fade-in-animate)/about/_components/background';
+import { Education } from '@/app/(fade-in-animate)/about/_components/education';
+import { Experience } from '@/app/(fade-in-animate)/about/_components/experience';
+import { Skills } from '@/app/(fade-in-animate)/about/_components/skills';
 
 export default function AboutPage() {
   return (
