@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Space_Mono } from 'next/font/google';
 
 import { Navbar } from '@/components/shared/navbar';
+import { Providers } from '@/components/shared/providers';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -23,10 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className='dark' lang='en'>
+    <html suppressHydrationWarning lang='en'>
       <body className={` ${spaceMono.variable} antialiased`}>
-        <Navbar />
-        {children}
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );

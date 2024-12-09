@@ -26,7 +26,7 @@ export function ProjectCard({
     <Card>
       <CardContent className='p-6'>
         <h2 className='mb-4 text-2xl font-bold'>{title}</h2>
-        <p className='mb-6 text-gray-300'>{description}</p>
+        <p className='mb-6 text-muted-foreground'>{description}</p>
 
         <div className='mb-6 flex flex-wrap gap-2'>
           {tech.map((tech, index) => (

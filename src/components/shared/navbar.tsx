@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import { NavLink } from '@/components/shared/nav-link';
+import { ToggleTheme } from '@/components/shared/toggle-theme';
+import { Button } from '@/components/ui/button';
 import { navLinks } from '@/constants';
 
 export function Navbar() {
@@ -16,7 +18,7 @@ export function Navbar() {
         <div className='flex h-16 items-center justify-between'>
           {/* Logo */}
           <Link className='text-xl font-bold text-primary' href='/'>
-            ErfanPaya<span className='text-white'>.</span>
+            ErfanPaya<span className='text-foreground'>.</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -28,15 +30,24 @@ export function Navbar() {
                 title={link.title}
               />
             ))}
+            <ToggleTheme />
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className='hover:text-primary md:hidden'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
-          </button>
+          <div className='md:hidden'>
+            <ToggleTheme />
+            <Button
+              size='icon'
+              variant='ghost'
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? (
+                <X className='size-4' />
+              ) : (
+                <Menu className='size-4' />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

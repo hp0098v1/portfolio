@@ -1,8 +1,5 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
+import { SocialLinks } from '@/components/shared/social-links';
 import { Card, CardContent } from '@/components/ui/card';
-import { socialLinks } from '@/constants';
 
 export function Background() {
   return (
@@ -23,33 +20,7 @@ export function Background() {
             optimizing web performance.
           </p>
 
-          <div className='flex flex-wrap gap-4'>
-            <Button asChild variant='outline'>
-              <a
-                href={socialLinks.github}
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <Github /> GitHub
-              </a>
-            </Button>
-            <Button asChild variant='outline'>
-              <a
-                href={socialLinks.linkedin}
-                rel='noopener noreferrer'
-                target='_blank'
-              >
-                <Linkedin />
-                LinkedIn
-              </a>
-            </Button>
-            <Button asChild variant='outline'>
-              <a href={`mailto:${socialLinks.email}`}>
-                <Mail />
-                Email
-              </a>
-            </Button>
-          </div>
+          <SocialLinks />
         </CardContent>
       </Card>
     </section>

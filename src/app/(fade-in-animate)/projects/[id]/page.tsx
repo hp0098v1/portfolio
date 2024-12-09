@@ -45,7 +45,9 @@ export default async function ProjectPage({
         </div>
 
         <h1 className='mb-6 text-4xl font-bold'>{project.title}</h1>
-        <p className='mb-8 text-xl text-gray-300'>{project.longDescription}</p>
+        <p className='mb-8 text-xl text-muted-foreground'>
+          {project.longDescription}
+        </p>
 
         <div className='mb-12'>
           <h2 className='mb-4 text-2xl font-bold'>Technologies Used</h2>
@@ -64,7 +66,7 @@ export default async function ProjectPage({
 
         <div className='mb-12'>
           <h2 className='mb-4 text-2xl font-bold'>Key Features</h2>
-          <ul className='list-inside list-disc space-y-2 text-gray-300'>
+          <ul className='list-inside list-disc space-y-2 text-muted-foreground'>
             {project.features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}

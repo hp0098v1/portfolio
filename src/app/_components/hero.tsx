@@ -1,8 +1,4 @@
-import { Github, Linkedin } from 'lucide-react';
-import Link from 'next/link';
-
-import { Button } from '@/components/ui/button';
-import { socialLinks } from '@/constants';
+import { SocialLinks } from '@/components/shared/social-links';
 
 export function Hero() {
   return (
@@ -15,29 +11,8 @@ export function Hero() {
           I craft responsive and performant web applications with modern
           technologies
         </p>
-        <div className='flex flex-wrap justify-center gap-4'>
-          <Button asChild variant='default'>
-            <Link href='/projects'>View Projects</Link>
-          </Button>
-          <Button asChild variant='outline'>
-            <a
-              href={socialLinks.github}
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              <Github /> GitHub
-            </a>
-          </Button>
-          <Button asChild variant='outline'>
-            <a
-              href={socialLinks.linkedin}
-              rel='noopener noreferrer'
-              target='_blank'
-            >
-              <Linkedin /> LinkedIn
-            </a>
-          </Button>
-        </div>
+
+        <SocialLinks className='justify-center' />
       </div>
     </section>
   );
