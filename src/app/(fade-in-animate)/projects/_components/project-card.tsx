@@ -1,8 +1,9 @@
+import { BookOpen, Github, Monitor } from 'lucide-react';
+import Link from 'next/link';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { BookOpen, Github, Monitor } from 'lucide-react';
-import Link from 'next/link';
 
 type Props = {
   id: string;
@@ -24,10 +25,10 @@ export function ProjectCard({
   return (
     <Card>
       <CardContent className='p-6'>
-        <h2 className='text-2xl font-bold mb-4'>{title}</h2>
-        <p className='text-gray-300 mb-6'>{description}</p>
+        <h2 className='mb-4 text-2xl font-bold'>{title}</h2>
+        <p className='mb-6 text-gray-300'>{description}</p>
 
-        <div className='flex flex-wrap gap-2 mb-6'>
+        <div className='mb-6 flex flex-wrap gap-2'>
           {tech.map((tech, index) => (
             <Badge key={index} variant='outline'>
               {tech}
@@ -42,14 +43,14 @@ export function ProjectCard({
             </Link>
           </Button>
 
-          <Button variant='outline' asChild>
-            <a href={githubUrl} target='_blank' rel='noopener noreferrer'>
+          <Button asChild variant='outline'>
+            <a href={githubUrl} rel='noopener noreferrer' target='_blank'>
               <Github />
               Github
             </a>
           </Button>
-          <Button variant='outline' asChild>
-            <a href={demoUrl} target='_blank' rel='noopener noreferrer'>
+          <Button asChild variant='outline'>
+            <a href={demoUrl} rel='noopener noreferrer' target='_blank'>
               <Monitor />
               Live Demo
             </a>

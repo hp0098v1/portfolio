@@ -4,14 +4,13 @@ import { ContactForm } from '@/components/shared/contact-form';
 
 export default function ContactPage() {
   return (
-    <main className='min-h-screen  py-20 px-4'>
-      <div className='max-w-4xl mx-auto'>
-        <h1 className='text-4xl font-bold mb-8'>Contact Me</h1>
+    <main className='min-h-screen px-4 py-20'>
+      <div className='mx-auto max-w-4xl'>
+        <h1 className='mb-8 text-4xl font-bold'>Contact Me</h1>
 
-        <div className='grid md:grid-cols-2 gap-12'>
+        <div className='grid gap-12 md:grid-cols-2'>
           <div className='space-y-8'>
-            
-        <ContactInformation />
+            <ContactInformation />
 
             <SocialLinks />
           </div>

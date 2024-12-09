@@ -4,7 +4,7 @@ type Props = {
 
 export default function Template({ children }: Props) {
   return (
-    <div className='min-h-screen py-20 px-4 motion-preset-fade motion-duration-1500'>
+    <div className='motion-preset-fade min-h-screen px-4 py-20 motion-duration-1500'>
       {children}
     </div>
   );

@@ -1,21 +1,22 @@
+import { Github, Linkedin, Mail } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { socialLinks } from '@/constants';
-import { Github, Linkedin, Mail } from 'lucide-react';
 
 export function Background() {
   return (
     <section>
-      <h2 className='text-2xl font-bold mb-4 text-primary'>Background</h2>
+      <h2 className='mb-4 text-2xl font-bold text-primary'>Background</h2>
       <Card>
-        <CardContent className='p-6 space-y-4'>
-          <p className='text-muted-foreground leading-relaxed'>
+        <CardContent className='space-y-4 p-6'>
+          <p className='leading-relaxed text-muted-foreground'>
             I&apos;m a passionate frontend developer with several years of
             experience in creating modern web applications. My journey in web
             development started with a curiosity about how websites work, which
             led me to dive deep into the world of frontend development.
           </p>
-          <p className='text-muted-foreground leading-relaxed'>
+          <p className='leading-relaxed text-muted-foreground'>
             I specialize in building responsive, user-friendly interfaces using
             modern technologies like React, Next.js, and TypeScript. I&apos;m
             particularly interested in creating seamless user experiences and
@@ -26,8 +27,8 @@ export function Background() {
             <Button asChild variant='outline'>
               <a
                 href={socialLinks.github}
-                target='_blank'
                 rel='noopener noreferrer'
+                target='_blank'
               >
                 <Github /> GitHub
               </a>
@@ -35,8 +36,8 @@ export function Background() {
             <Button asChild variant='outline'>
               <a
                 href={socialLinks.linkedin}
-                target='_blank'
                 rel='noopener noreferrer'
+                target='_blank'
               >
                 <Linkedin />
                 LinkedIn

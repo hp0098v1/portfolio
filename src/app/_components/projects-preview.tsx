@@ -1,7 +1,7 @@
-import { projects } from '@/constants';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -9,26 +9,27 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { projects } from '@/constants';
 
 export function ProjectsPreview() {
   return (
-    <section className='py-20 px-4'>
-      <div className='max-w-4xl mx-auto'>
-        <div className='flex justify-between items-center mb-8'>
+    <section className='px-4 py-20'>
+      <div className='mx-auto max-w-4xl'>
+        <div className='mb-8 flex items-center justify-between'>
           <h2 className='text-3xl font-bold'>Projects</h2>
           <Button asChild variant='link'>
             <Link href='/projects'>View all projects →</Link>
           </Button>
         </div>
-        <div className='grid md:grid-cols-2 gap-6'>
-          {projects.slice(0, 2).map((project) => (
+        <div className='grid gap-6 md:grid-cols-2'>
+          {projects.slice(0, 2).map(project => (
             <Card key={project.id}>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <div className='flex flex-wrap gap-2 mb-4'>
+                <div className='mb-4 flex flex-wrap gap-2'>
                   {project.tech.map((tech, index) => (
                     <Badge key={index} variant='outline'>
                       {tech}

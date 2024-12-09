@@ -1,21 +1,21 @@
-import { projects } from '@/constants';
 import { ProjectCard } from '@/app/(fade-in-animate)/projects/_components/project-card';
+import { projects } from '@/constants';
 
 export default function ProjectsPage() {
   return (
-    <main className='min-h-screen py-20 px-4'>
-      <div className='max-w-4xl mx-auto'>
-        <h1 className='text-4xl font-bold mb-8'>Projects</h1>
+    <main className='min-h-screen px-4 py-20'>
+      <div className='mx-auto max-w-4xl'>
+        <h1 className='mb-8 text-4xl font-bold'>Projects</h1>
         <div className='grid gap-8'>
-          {projects.map((project) => (
+          {projects.map(project => (
             <ProjectCard
-              key={`project-${project.id}`}
-              id={project.id}
-              title={project.title}
-              description={project.description}
-              tech={project.tech}
               demoUrl={project.link}
+              description={project.description}
               githubUrl={project.github}
+              id={project.id}
+              key={`project-${project.id}`}
+              tech={project.tech}
+              title={project.title}
             />
           ))}
         </div>

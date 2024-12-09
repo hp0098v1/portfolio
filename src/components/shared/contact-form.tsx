@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -11,7 +12,6 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -28,10 +28,10 @@ export function ContactForm() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
       [name]: value,
     }));
@@ -46,54 +46,54 @@ export function ContactForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className='space-y-4'>
+        <form className='space-y-4' onSubmit={handleSubmit}>
           <div className='space-y-2'>
             <Label htmlFor='name'>Name</Label>
             <Input
+              required
               id='name'
               name='name'
               value={formData.name}
               onChange={handleChange}
-              required
             />
           </div>
 
           <div className='space-y-2'>
             <Label htmlFor='email'>Email</Label>
             <Input
-              type='email'
+              required
               id='email'
               name='email'
+              type='email'
               value={formData.email}
               onChange={handleChange}
-              required
             />
           </div>
 
           <div className='space-y-2'>
             <Label htmlFor='subject'>Subject</Label>
             <Input
+              required
               id='subject'
               name='subject'
               value={formData.subject}
               onChange={handleChange}
-              required
             />
           </div>
 
           <div className='space-y-2'>
             <Label htmlFor='message'>Message</Label>
             <Textarea
+              required
               id='message'
               name='message'
+              rows={4}
               value={formData.message}
               onChange={handleChange}
-              required
-              rows={4}
             />
           </div>
 
-          <Button type='submit' className='w-full'>
+          <Button className='w-full' type='submit'>
             Send Message
           </Button>
         </form>

@@ -1,8 +1,8 @@
 'use client';
 
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 
 import { NavLink } from '@/components/shared/nav-link';
 import { navLinks } from '@/constants';
@@ -11,28 +11,28 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className='fixed top-0 left-0 w-full backdrop-blur-sm z-50'>
-      <div className='max-w-4xl mx-auto px-4'>
-        <div className='flex items-center justify-between h-16'>
+    <nav className='fixed left-0 top-0 z-50 w-full backdrop-blur-sm'>
+      <div className='mx-auto max-w-4xl px-4'>
+        <div className='flex h-16 items-center justify-between'>
           {/* Logo */}
-          <Link href='/' className='text-xl font-bold text-primary'>
+          <Link className='text-xl font-bold text-primary' href='/'>
             ErfanPaya<span className='text-white'>.</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className='hidden md:flex items-center space-x-8'>
-            {navLinks.map((link) => (
+          <div className='hidden items-center space-x-8 md:flex'>
+            {navLinks.map(link => (
               <NavLink
+                href={link.url}
                 key={`navbar-link-${link.id}`}
                 title={link.title}
-                href={link.url}
               />
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className='md:hidden hover:text-primary'
+            className='hover:text-primary md:hidden'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X /> : <Menu />}
@@ -41,13 +41,13 @@ export function Navbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className='absolute top-12 md:hidden py-4 backdrop-blur-sm z-50 w-full'>
+          <div className='absolute top-12 z-50 w-full py-4 backdrop-blur-sm md:hidden'>
             <div className='flex flex-col space-y-4'>
-              {navLinks.map((link) => (
+              {navLinks.map(link => (
                 <NavLink
+                  href={link.url}
                   key={`navbar-link-${link.id}`}
                   title={link.title}
-                  href={link.url}
                 />
               ))}
             </div>

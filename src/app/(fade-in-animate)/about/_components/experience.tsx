@@ -3,15 +3,15 @@ import { Card, CardContent } from '@/components/ui/card';
 export function Experience() {
   return (
     <section>
-      <h2 className='text-2xl font-bold mb-4 text-primary'>Experience</h2>
+      <h2 className='mb-4 text-2xl font-bold text-primary'>Experience</h2>
       <div className='space-y-6'>
         <Card>
           <CardContent className='p-6'>
-            <h3 className='text-xl font-bold mb-2'>
+            <h3 className='mb-2 text-xl font-bold'>
               Senior Frontend Developer
             </h3>
-            <p className='text-primary mb-2'>Tech Company • 2021 - Present</p>
-            <ul className='list-disc list-inside text-muted-foreground space-y-2'>
+            <p className='mb-2 text-primary'>Tech Company • 2021 - Present</p>
+            <ul className='list-inside list-disc space-y-2 text-muted-foreground'>
               <li>
                 Led the development of multiple high-impact web applications
               </li>
@@ -24,9 +24,9 @@ export function Experience() {
         </Card>
         <Card>
           <CardContent className='p-6'>
-            <h3 className='text-xl font-bold mb-2'>Frontend Developer</h3>
-            <p className='text-primary mb-2'>Digital Agency • 2019 - 2021</p>
-            <ul className='list-disc list-inside text-muted-foreground space-y-2'>
+            <h3 className='mb-2 text-xl font-bold'>Frontend Developer</h3>
+            <p className='mb-2 text-primary'>Digital Agency • 2019 - 2021</p>
+            <ul className='list-inside list-disc space-y-2 text-muted-foreground'>
               <li>
                 Developed responsive web applications using React and TypeScript
               </li>

@@ -1,7 +1,6 @@
-
 import { Github, Linkedin } from 'lucide-react';
 
-import { socialLinks } from '@/constants';
+import { ContactForm } from '@/components/shared/contact-form';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -10,17 +9,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-
-import { ContactForm } from '@/components/shared/contact-form';
+import { socialLinks } from '@/constants';
 
 export function Contact() {
-  
-
   return (
-    <section className='py-20 px-4 '>
-      <div className='max-w-4xl mx-auto'>
-        <h2 className='text-3xl font-bold mb-8'>Get in Touch</h2>
-        <div className='grid md:grid-cols-2 gap-8'>
+    <section className='px-4 py-20'>
+      <div className='mx-auto max-w-4xl'>
+        <h2 className='mb-8 text-3xl font-bold'>Get in Touch</h2>
+        <div className='grid gap-8 md:grid-cols-2'>
           <Card>
             <CardHeader>
               <CardTitle>Contact Information</CardTitle>
@@ -30,16 +26,16 @@ export function Contact() {
             </CardHeader>
             <CardContent className='space-y-4'>
               <div>
-                <h3 className='font-semibold mb-2'>Email</h3>
+                <h3 className='mb-2 font-semibold'>Email</h3>
                 <a
+                  className='text-muted-foreground transition-colors hover:text-primary'
                   href={`mailto:${socialLinks.email}`}
-                  className='text-muted-foreground hover:text-primary transition-colors'
                 >
                   {socialLinks.email}
                 </a>
               </div>
               <div>
-                <h3 className='font-semibold mb-2'>Location</h3>
+                <h3 className='mb-2 font-semibold'>Location</h3>
                 <p className='text-muted-foreground'>
                   {socialLinks.location}
                   <br />
@@ -50,8 +46,8 @@ export function Contact() {
                 <Button asChild variant='outline'>
                   <a
                     href={socialLinks.github}
-                    target='_blank'
                     rel='noopener noreferrer'
+                    target='_blank'
                   >
                     <Github /> GitHub
                   </a>
@@ -59,8 +55,8 @@ export function Contact() {
                 <Button asChild variant='outline'>
                   <a
                     href={socialLinks.linkedin}
-                    target='_blank'
                     rel='noopener noreferrer'
+                    target='_blank'
                   >
                     <Linkedin /> LinkedIn
                   </a>
