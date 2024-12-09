@@ -1,11 +1,11 @@
 'use client';
 
 import { Home, RotateCcw } from 'lucide-react';
-import Link from 'next/link';
 import { useEffect } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Link } from '@/i18n/routing';
 
 export default function Error({
   error,

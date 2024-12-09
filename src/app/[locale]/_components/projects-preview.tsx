@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,6 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { projects } from '@/constants';
+import { Link } from '@/i18n/routing';
 
 export function ProjectsPreview() {
   return (

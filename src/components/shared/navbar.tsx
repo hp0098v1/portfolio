@@ -1,16 +1,19 @@
 'use client';
 
 import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
+import { LanguageSwitcher } from '@/components/shared/language-switcher';
 import { NavLink } from '@/components/shared/nav-link';
 import { ToggleTheme } from '@/components/shared/toggle-theme';
 import { Button } from '@/components/ui/button';
 import { navLinks } from '@/constants';
+import { Link } from '@/i18n/routing';
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations('shared.navbar.links');
 
   return (
     <nav className='fixed left-0 top-0 z-50 w-full backdrop-blur-sm'>
@@ -27,15 +30,19 @@ export function Navbar() {
               <NavLink
                 href={link.url}
                 key={`navbar-link-${link.id}`}
-                title={link.title}
+                title={t(link.id)}
               />
             ))}
-            <ToggleTheme />
+            <div>
+              <ToggleTheme />
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <div className='md:hidden'>
             <ToggleTheme />
+            <LanguageSwitcher />
             <Button
               size='icon'
               variant='ghost'
@@ -58,7 +65,7 @@ export function Navbar() {
                 <NavLink
                   href={link.url}
                   key={`navbar-link-${link.id}`}
-                  title={link.title}
+                  title={t(link.id)}
                 />
               ))}
             </div>

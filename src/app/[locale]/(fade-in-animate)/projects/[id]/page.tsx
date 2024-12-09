@@ -1,11 +1,11 @@
 import { Github, Monitor } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/constants';
+import { Link } from '@/i18n/routing';
 
 export function generateStaticParams() {
   return projects.map(project => ({

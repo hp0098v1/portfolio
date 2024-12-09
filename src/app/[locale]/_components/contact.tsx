@@ -1,5 +1,5 @@
-import { ContactInformation } from '@/app/(fade-in-animate)/contact/_components/contact-information';
-import { SocialLinks } from '@/app/(fade-in-animate)/contact/_components/social-links';
+import { ContactInformation } from '@/app/[locale]/(fade-in-animate)/contact/_components/contact-information';
+import { SocialLinks } from '@/app/[locale]/(fade-in-animate)/contact/_components/social-links';
 import { ContactForm } from '@/components/shared/contact-form';
 
 export function Contact() {

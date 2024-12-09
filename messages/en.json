@@ -1,0 +1,18 @@
+{
+  "shared": {
+    "languageSwitcher": {
+      "english": "English",
+      "persian": "Persian"
+    },
+    "navbar": {
+      "links": {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    }
+  },
+  "LocaleLayout": {
+    "title": "next-intl example"
+  }
+}

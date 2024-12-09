@@ -1,7 +1,7 @@
-import { AboutPreview } from '@/app/_components/about-preview';
-import { Contact } from '@/app/_components/contact';
-import { Hero } from '@/app/_components/hero';
-import { ProjectsPreview } from '@/app/_components/projects-preview';
+import { AboutPreview } from '@/app/[locale]/_components/about-preview';
+import { Contact } from '@/app/[locale]/_components/contact';
+import { Hero } from '@/app/[locale]/_components/hero';
+import { ProjectsPreview } from '@/app/[locale]/_components/projects-preview';
 
 export default function Home() {
   return (
