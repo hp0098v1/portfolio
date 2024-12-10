@@ -14,20 +14,36 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
+const initialValues = {
+  name: '',
+  email: '',
+  subject: '',
+  message: '',
+};
+
 export function ContactForm() {
   const t = useTranslations('shared.contact.contactForm');
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState(initialValues);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      });
+
+      const data = await response.json();
+      console.log(data);
+      setFormData(initialValues);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleChange = (
