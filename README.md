@@ -1,8 +1,17 @@
-# Portfolio Website
+<img src="https://i.ibb.co/cQRtvhQ/screenshot.png" alt="screenshot" border="0" width="360px" height="auto" style="border-radius: 10px; display: block; margin: 0 auto;" />
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation and Usage](#installation-and-usage)
+
+## Introduction
 
 This is my personal portfolio website built with **Next.js 15**, **TypeScript**, **shadcn/ui**, **TailwindCSS**, and **next-intl**. It showcases my projects, skills, and experiences while providing an easy way for people to contact me.
 
-<img src="https://i.ibb.co/cQRtvhQ/screenshot.png" alt="screenshot" border="0" />
+[**View Demo**](https://portfolio-hp0098v1.vercel.app)
 
 ## Features
 
