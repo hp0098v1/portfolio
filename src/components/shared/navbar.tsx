@@ -21,11 +21,12 @@ export function Navbar() {
         <div className='flex h-16 items-center justify-between'>
           {/* Logo */}
           <Link className='text-xl font-bold text-primary' href='/'>
-            ErfanPaya<span className='text-foreground'>.</span>
+            <span className='text-foreground'>&lt;</span>ErfanPaya
+            <span className='text-foreground'>&gt;</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className='hidden items-center space-x-8 md:flex'>
+          <div className='hidden items-center gap-8 md:flex'>
             {navLinks.map(link => (
               <NavLink
                 href={link.url}

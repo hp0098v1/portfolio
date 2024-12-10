@@ -18,11 +18,14 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>) {
   };
 }
 
-export default async function ContactPage() {
+export default async function ContactPage({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'contact' });
+
   return (
     <main className='min-h-screen px-4 py-20'>
       <div className='mx-auto max-w-4xl'>
-        <h1 className='mb-8 text-4xl font-bold'>Contact Me</h1>
+        <h1 className='mb-8 text-4xl font-bold'>{t('title')}</h1>
 
         <div className='grid gap-12 md:grid-cols-2'>
           <div className='space-y-8'>

@@ -216,6 +216,9 @@
       }
     ]
   },
+  "contact": {
+    "title": "Contact Me"
+  },
   "shared": {
     "languageSwitcher": {
       "english": "English",

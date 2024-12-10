@@ -1,5 +1,7 @@
+import { BookOpen } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
+import { Project } from '@/app/[locale]/(fade-in-animate)/projects/page';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -9,11 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { projects } from '@/constants';
 import { Link } from '@/i18n/routing';
 
 export function ProjectsPreview() {
   const t = useTranslations('home.projects');
+  const t2 = useTranslations('projects');
 
   return (
     <section className='px-4 py-20'>
@@ -25,28 +27,33 @@ export function ProjectsPreview() {
           </Button>
         </div>
         <div className='grid gap-6 md:grid-cols-2'>
-          {projects.slice(0, 2).map(project => (
-            <Card key={project.id}>
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className='mb-4 flex flex-wrap gap-2'>
-                  {project.tech.map((tech, index) => (
-                    <Badge key={index} variant='outline'>
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                <div className='flex gap-4'>
-                  <Button asChild size='sm' variant='outline'>
-                    <Link href={`/projects/${project.id}`}>Learn More</Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {t2
+            .raw('items')
+            .slice(0, 2)
+            .map((project: Project) => (
+              <Card key={project.slug}>
+                <CardHeader>
+                  <CardTitle>{project.title}</CardTitle>
+                  <CardDescription>{project.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className='mb-4 flex flex-wrap gap-2'>
+                    {project.tech.map((tech, index) => (
+                      <Badge key={index} variant='outline'>
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className='flex gap-4'>
+                    <Button asChild>
+                      <Link href={`/projects/${project.slug}`}>
+                        <BookOpen /> {t2('viewDetails')}
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
         </div>
       </div>
     </section>
