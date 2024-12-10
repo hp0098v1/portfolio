@@ -27,18 +27,12 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
-      to: process.env.EMAIL_RECEIVER, // ایمیل شما
+      from: `"${name}" "${email}" <${email}>`,
+      to: process.env.EMAIL_RECEIVER,
       subject: subject,
-      text: message,
+      text: `${email} \n ${message}`,
     });
 
-    // return new Response(
-    //   JSON.stringify({ success: true, message: 'Email sent successfully' }),
-    //   {
-    //     status: 200,
-    //   },
-    // );
     return NextResponse.json(
       {
         success: true,
