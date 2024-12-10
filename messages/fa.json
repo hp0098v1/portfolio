@@ -81,5 +81,93 @@
     "contact": {
       "title": "تماس با من"
     }
+  },
+  "about": {
+    "title": "درباره من",
+    "background": {
+      "title": "پس زمینه",
+      "description": [
+        "من یک توسعه دهنده فرانت اند با سابقه سالها در ایجاد تجربیات دیجیتال مدرن وب هستم. من با علاقه به فناوری های مدرن وب شروع کردم و به عمق در عالم توسعه فرانت اند عمیقاً پیوستم.",
+        "من در ساختن رابط‌های پاسخگو و کاربرپسند با استفاده از فناوری‌های مدرن مانند React، Next.js و TypeScript تخصص دارم. من به خصوص به ایجاد تجربیات کاربر بدون درز و بهینه سازی عملکرد وب علاقه مند هستم."
+      ]
+    },
+    "experience": {
+      "title": "تجربه",
+      "items": [
+        {
+          "title": "توسعه دهنده فرانت اند",
+          "companyName": "به صورت فریلنسر",
+          "startDate": "1403-07",
+          "endDate": "1403-09",
+          "responsibilities": [
+            "برنامه های وب با تاثیر بالا را توسعه داد",
+            "منتوری برای توسعه دهندگان جوان و ارزیابی کد",
+            "پیاده سازی روش های بهتر و مدرن توسعه"
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "companyName": "Orbyx Team",
+          "startDate": "1403-04",
+          "endDate": "1403-06",
+          "responsibilities": [
+            "برنامه های وب با تاثیر بالا را توسعه داد",
+            "منتوری برای توسعه دهندگان جوان و ارزیابی کد",
+            "پیاده سازی روش های بهتر و مدرن توسعه"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "مهارت ها",
+      "languages": {
+        "title": "زبان های برنامه نویسی",
+        "items": ["JavaScript", "TypeScript", "HTML5", "CSS3"]
+      },
+      "frameworks": {
+        "title": "فریم ورک ها و کتابخانه ها",
+        "items": [
+          "React.js",
+          "Next.js",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Material UI"
+        ]
+      },
+      "tools": {
+        "title": "ابزارها",
+        "items": ["Git", "GitHub", "VS Code", "Vim", "Figma", "Docker"]
+      },
+      "databases": {
+        "title": "دیتابیس ها",
+        "items": ["MongoDB", "PostgreSQL"]
+      },
+      "other": {
+        "title": "سایر مهارت ها",
+        "items": [
+          "RESTful APIs",
+          "GraphQL",
+          "Responsive Design",
+          "UI/UX Design",
+          "Agile/Scrum",
+          "Testing (Jest)"
+        ]
+      }
+    },
+    "education": {
+      "title": "تحصیلات",
+      "items": [
+        {
+          "degree": "کارشناسی مهندسی کامپیوتر",
+          "university": "دانشگاه محمود آباد (مازندران)",
+          "startDate": "1400",
+          "endDate": "present",
+          "description": "متمرکز بر توسعه نرم افزار و فناوری های مدرن وب. عضو شدن در پروژه های برنامه نویسی و مسابقات."
+        }
+      ]
+    }
   }
 }

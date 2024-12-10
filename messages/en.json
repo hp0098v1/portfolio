@@ -81,5 +81,93 @@
     "contact": {
       "title": "Get in Touch"
     }
+  },
+  "about": {
+    "title": "About Me",
+    "background": {
+      "title": "Background",
+      "description": [
+        "I'm a passionate frontend developer with several years of experience in creating modern web applications. My journey in web development started with a curiosity about how websites work, which led me to dive deep into the world of frontend development.",
+        "I specialize in building responsive, user-friendly interfaces using modern technologies like React, Next.js, and TypeScript. I'm particularly interested in creating seamless user experiences and optimizing web performance."
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "title": "Frontend Developer",
+          "companyName": "as Freelancer",
+          "startDate": "2024-09",
+          "endDate": "2024-11",
+          "responsibilities": [
+            "Led the development of multiple high-impact web applications",
+            "Mentored junior developers and conducted code reviews",
+            "Implemented best practices and modern development workflows"
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "companyName": "Orbyx Team",
+          "startDate": "2024-06",
+          "endDate": "2024-08",
+          "responsibilities": [
+            "Developed responsive web applications using React and TypeScript",
+            "Collaborated with designers to implement pixel-perfect designs",
+            "Improved site performance and SEO"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "languages": {
+        "title": "Programming Languages",
+        "items": ["JavaScript", "TypeScript", "HTML5", "CSS3"]
+      },
+      "frameworks": {
+        "title": "Frameworks & Libraries",
+        "items": [
+          "React.js",
+          "Next.js",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Material UI"
+        ]
+      },
+      "tools": {
+        "title": "Tools",
+        "items": ["Git", "GitHub", "VS Code", "Vim", "Figma", "Docker"]
+      },
+      "databases": {
+        "title": "Databases",
+        "items": ["MongoDB", "PostgreSQL"]
+      },
+      "other": {
+        "title": "Other Skills",
+        "items": [
+          "RESTful APIs",
+          "GraphQL",
+          "Responsive Design",
+          "UI/UX Design",
+          "Agile/Scrum",
+          "Testing (Jest)"
+        ]
+      }
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "degree": "Bachelor of Computer Engineering",
+          "university": "MahmooadAbad (Mazndaran) University",
+          "startDate": "2021",
+          "endDate": "present",
+          "description": "Focused on software development and web technologies. Participated in various programming projects and competitions."
+        }
+      ]
+    }
   }
 }
