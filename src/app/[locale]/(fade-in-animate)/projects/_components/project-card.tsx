@@ -1,27 +1,11 @@
-import { BookOpen, Github, Monitor } from 'lucide-react';
-
+import ProjectLinks from '@/app/[locale]/(fade-in-animate)/projects/_components/project-links';
+import { Project } from '@/app/[locale]/(fade-in-animate)/projects/page';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Link } from '@/i18n/routing';
 
-type Props = {
-  id: string;
-  title: string;
-  description: string;
-  tech: string[];
-  demoUrl: string;
-  githubUrl: string;
-};
+type Props = Pick<Project, 'title' | 'description' | 'tech' | 'slug' | 'links'>;
 
-export function ProjectCard({
-  id,
-  title,
-  description,
-  tech,
-  demoUrl,
-  githubUrl,
-}: Props) {
+export function ProjectCard({ title, description, tech, slug, links }: Props) {
   return (
     <Card>
       <CardContent className='p-6'>
@@ -36,26 +20,7 @@ export function ProjectCard({
           ))}
         </div>
 
-        <div className='flex flex-wrap gap-4'>
-          <Button asChild>
-            <Link href={`/projects/${id}`}>
-              <BookOpen /> View Details
-            </Link>
-          </Button>
-
-          <Button asChild variant='outline'>
-            <a href={githubUrl} rel='noopener noreferrer' target='_blank'>
-              <Github />
-              Github
-            </a>
-          </Button>
-          <Button asChild variant='outline'>
-            <a href={demoUrl} rel='noopener noreferrer' target='_blank'>
-              <Monitor />
-              Live Demo
-            </a>
-          </Button>
-        </div>
+        <ProjectLinks links={links} slug={slug} />
       </CardContent>
     </Card>
   );
