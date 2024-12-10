@@ -259,6 +259,33 @@
         "subject": "Subject",
         "message": "Message",
         "submitBtn": "Send Message"
+      },
+      "responses": {
+        "invalidData": "Invalid form data",
+        "envMissing": "Server configuration error",
+        "success": "Email sent successfully",
+        "error": "Failed to send email"
+      }
+    },
+    "validations": {
+      "name": {
+        "required": "Name is required",
+        "min": "Name must be at least {min} characters",
+        "max": "Name must be less than {max} characters"
+      },
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "subject": {
+        "required": "Subject is required",
+        "min": "Subject must be at least {min} characters",
+        "max": "Subject must be less than {max} characters"
+      },
+      "message": {
+        "required": "Message is required",
+        "min": "Message must be at least {min} characters",
+        "max": "Message must be less than {max} characters"
       }
     }
   }

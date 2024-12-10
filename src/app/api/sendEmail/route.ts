@@ -1,8 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getTranslations } from 'next-intl/server';
 import { createTransport } from 'nodemailer';
 
+import { createContactFormSchema } from '@/lib/validations/contact-form-validations';
+
 export async function POST(req: NextRequest) {
+  const locale = req.headers.get('x-locale') || 'en';
+  const t = await getTranslations({
+    locale,
+    namespace: 'shared.contact.responses',
+  });
+  const tValidation = await getTranslations({ locale });
+
+  const contactFormSchema = createContactFormSchema(tValidation);
   const { name, email, subject, message } = await req.json();
+
+  const result = contactFormSchema.safeParse({ name, email, subject, message });
+
+  if (!result.success) {
+    return NextResponse.json(
+      {
+        success: false,
+        message: t('invalidData'),
+      },
+      { status: 400 },
+    );
+  }
 
   if (
     !process.env.SMTP_HOST ||
@@ -11,7 +34,13 @@ export async function POST(req: NextRequest) {
     !process.env.SMTP_PASSWORD ||
     !process.env.EMAIL_RECEIVER
   ) {
-    throw Error('One of env vars is missing');
+    return NextResponse.json(
+      {
+        success: false,
+        message: t('envMissing'),
+      },
+      { status: 500 },
+    );
   }
 
   try {
@@ -36,7 +65,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: 'Email sent successfully',
+        message: t('success'),
       },
       { status: 200 },
     );
@@ -45,7 +74,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        message: 'Failed to send email',
+        message: t('error'),
       },
       { status: 500 },
     );

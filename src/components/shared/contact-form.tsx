@@ -1,6 +1,10 @@
 'use client';
-import { useTranslations } from 'next-intl';
-import { useState } from 'react';
+
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useTranslations, useLocale } from 'next-intl';
+import { useTransition } from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -10,50 +14,70 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-
-const initialValues = {
-  name: '',
-  email: '',
-  subject: '',
-  message: '',
-};
+import { useToast } from '@/hooks/use-toast';
+import { createContactFormSchema } from '@/lib/validations/contact-form-validations';
 
 export function ContactForm() {
   const t = useTranslations('shared.contact.contactForm');
+  const tResponses = useTranslations('shared.contact.responses');
+  const tValidation = useTranslations();
+  const { toast } = useToast();
+  const [isPending, startTransition] = useTransition();
+  const locale = useLocale();
 
-  const [formData, setFormData] = useState(initialValues);
+  const contactFormSchema = createContactFormSchema(tValidation);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const contactForm = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    },
+  });
 
-    try {
-      const response = await fetch('/api/sendEmail', {
-        method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-          'Content-type': 'application/json',
-        },
-      });
+  const handleSubmit = async (values: z.infer<typeof contactFormSchema>) => {
+    startTransition(async () => {
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers: {
+            'Content-type': 'application/json',
+            'x-locale': locale,
+          },
+        });
 
-      const data = await response.json();
-      console.log(data);
-      setFormData(initialValues);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+        const data = await response.json();
+        toast({
+          title: data.success ? tResponses('success') : tResponses('error'),
+          description: data.message,
+          variant: data.success ? 'default' : 'destructive',
+        });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
-    }));
+        if (data.success) {
+          contactForm.reset();
+        }
+      } catch (error) {
+        console.log(error);
+        toast({
+          title: tResponses('error'),
+          description: tResponses('somethingWentWrong'),
+          variant: 'destructive',
+        });
+      }
+    });
   };
 
   return (
@@ -63,57 +87,69 @@ export function ContactForm() {
         <CardDescription>{t('description')}</CardDescription>
       </CardHeader>
       <CardContent>
-        <form className='space-y-4' onSubmit={handleSubmit}>
-          <div className='space-y-2'>
-            <Label htmlFor='name'>{t('name')}</Label>
-            <Input
-              required
-              id='name'
+        <Form {...contactForm}>
+          <form
+            className='space-y-4'
+            onSubmit={contactForm.handleSubmit(handleSubmit)}
+          >
+            <FormField
+              control={contactForm.control}
               name='name'
-              value={formData.name}
-              onChange={handleChange}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('name')}</FormLabel>
+                  <FormControl>
+                    <Input {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
-
-          <div className='space-y-2'>
-            <Label htmlFor='email'>{t('email')}</Label>
-            <Input
-              required
-              id='email'
+            <FormField
+              control={contactForm.control}
               name='email'
-              type='email'
-              value={formData.email}
-              onChange={handleChange}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('email')}</FormLabel>
+                  <FormControl>
+                    <Input type='email' {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
-
-          <div className='space-y-2'>
-            <Label htmlFor='subject'>{t('subject')}</Label>
-            <Input
-              required
-              id='subject'
+            <FormField
+              control={contactForm.control}
               name='subject'
-              value={formData.subject}
-              onChange={handleChange}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('subject')}</FormLabel>
+                  <FormControl>
+                    <Input {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
-
-          <div className='space-y-2'>
-            <Label htmlFor='message'>{t('message')}</Label>
-            <Textarea
-              required
-              id='message'
+            <FormField
+              control={contactForm.control}
               name='message'
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>{t('message')}</FormLabel>
+                  <FormControl>
+                    <Textarea rows={4} {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-          </div>
 
-          <Button className='w-full' type='submit'>
-            {t('submitBtn')}
-          </Button>
-        </form>
+            <Button className='w-full' isLoading={isPending} type='submit'>
+              {t('submitBtn')}
+            </Button>
+          </form>
+        </Form>
       </CardContent>
     </Card>
   );

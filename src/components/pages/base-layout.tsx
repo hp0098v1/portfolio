@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 
 import { Navbar } from '@/components/shared/navbar';
 import { Providers } from '@/components/shared/providers';
+import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 
 const spaceMono = Space_Mono({
@@ -45,6 +46,7 @@ export async function BaseLayout({ children, locale }: Props) {
             {children}
           </Providers>
         </NextIntlClientProvider>
+        <Toaster />
       </body>
     </html>
   );
