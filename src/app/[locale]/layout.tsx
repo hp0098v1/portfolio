@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-import { BaseLayout } from '@/components/shared/base-layout';
+import { BaseLayout } from '@/components/pages/base-layout';
 import { routing } from '@/i18n/routing';
 
 type Props = {
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: Omit<Props, 'children'>) {
 
   return {
     title: {
-      template: '%s | Erfan Paya',
+      template: `%s | ${t('template')}`,
       default: t('title'),
     },
     description: t('description'),

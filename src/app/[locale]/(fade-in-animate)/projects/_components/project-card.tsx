@@ -1,4 +1,4 @@
-import ProjectLinks from '@/app/[locale]/(fade-in-animate)/projects/_components/project-links';
+import { ProjectLinks } from '@/app/[locale]/(fade-in-animate)/projects/_components/project-links';
 import { Project } from '@/app/[locale]/(fade-in-animate)/projects/page';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';

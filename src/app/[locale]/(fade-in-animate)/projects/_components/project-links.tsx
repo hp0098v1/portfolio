@@ -17,7 +17,7 @@ type Props = {
   className?: string;
 };
 
-export default function ProjectLinks({
+export function ProjectLinks({
   slug,
   links,
   showViewDetails = true,

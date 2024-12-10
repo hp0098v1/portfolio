@@ -8,6 +8,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -31,27 +32,28 @@ export function ProjectsPreview() {
             .raw('items')
             .slice(0, 2)
             .map((project: Project) => (
-              <Card key={project.slug}>
+              <Card
+                className='flex flex-col justify-between'
+                key={project.slug}
+              >
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
                   <CardDescription>{project.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className='mb-4 flex flex-wrap gap-2'>
-                    {project.tech.map((tech, index) => (
-                      <Badge key={index} variant='outline'>
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className='flex gap-4'>
-                    <Button asChild>
-                      <Link href={`/projects/${project.slug}`}>
-                        <BookOpen /> {t2('viewDetails')}
-                      </Link>
-                    </Button>
-                  </div>
+                <CardContent className='flex flex-wrap gap-2'>
+                  {project.tech.map((tech, index) => (
+                    <Badge key={index} variant='outline'>
+                      {tech}
+                    </Badge>
+                  ))}
                 </CardContent>
+                <CardFooter>
+                  <Button asChild>
+                    <Link href={`/projects/${project.slug}`}>
+                      <BookOpen /> {t2('viewDetails')}
+                    </Link>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
         </div>

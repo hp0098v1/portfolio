@@ -1,11 +1,10 @@
-import { Github, Monitor } from 'lucide-react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 
+import { ProjectLinks } from '@/app/[locale]/(fade-in-animate)/projects/_components/project-links';
 import { Project as ProjectType } from '@/app/[locale]/(fade-in-animate)/projects/page';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/routing';
 
 type Props = {
@@ -92,19 +91,11 @@ export default async function ProjectPage({ params }: Props) {
           </ul>
         </div>
 
-        <div className='flex gap-4'>
-          <Button asChild variant='outline'>
-            <a href={project.github} rel='noopener noreferrer' target='_blank'>
-              <Github />
-              {t('github')}
-            </a>
-          </Button>
-          <Button asChild variant='outline'>
-            <a href={project.link} rel='noopener noreferrer' target='_blank'>
-              <Monitor /> {t('live')}
-            </a>
-          </Button>
-        </div>
+        <ProjectLinks
+          links={project.links}
+          showViewDetails={false}
+          slug={project.slug}
+        />
       </div>
     </main>
   );
