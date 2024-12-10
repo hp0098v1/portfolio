@@ -12,7 +12,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'space-mono': ['var(--font-space-mono)', 'monospace'],
+        'space-mono': [
+          'var(--font-space-mono)',
+          'var(--font-vazirmatn)',
+          'monospace',
+        ],
+        vazirmatn: ['var(--font-vazirmatn)', 'sans-serif'],
       },
       colors: {
         primary: {

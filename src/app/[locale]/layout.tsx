@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-import BaseLayout from '@/components/shared/base-layout';
+import { BaseLayout } from '@/components/shared/base-layout';
 import { routing } from '@/i18n/routing';
 
 type Props = {
@@ -15,10 +15,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Omit<Props, 'children'>) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
+  const t = await getTranslations({ locale, namespace: 'metadata.default' });
 
   return {
-    title: t('title'),
+    title: {
+      template: '%s | Erfan Paya',
+      default: t('title'),
+    },
+    description: t('description'),
+    keywords: t('keywords'),
   };
 }
 

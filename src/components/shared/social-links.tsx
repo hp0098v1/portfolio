@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 import { Button } from '@/components/ui/button';
 import { socialLinks } from '@/constants';
@@ -17,6 +18,8 @@ export function SocialLinks({
   showLinkedin = true,
   className,
 }: Props) {
+  const t = useTranslations('shared.socialLinks');
+
   return (
     <div className={cn('flex flex-wrap items-center gap-2', className)}>
       {showGithub && (
@@ -26,7 +29,7 @@ export function SocialLinks({
             rel='noopener noreferrer'
             target='_blank'
           >
-            <Github /> GitHub
+            <Github /> {t('github')}
           </a>
         </Button>
       )}
@@ -37,7 +40,7 @@ export function SocialLinks({
             rel='noopener noreferrer'
             target='_blank'
           >
-            <Linkedin /> LinkedIn
+            <Linkedin /> {t('linkedin')}
           </a>
         </Button>
       )}
@@ -45,7 +48,7 @@ export function SocialLinks({
         <Button asChild variant='outline'>
           <a href={`mailto:${socialLinks.email}`}>
             <Mail />
-            Email
+            {t('email')}
           </a>
         </Button>
       )}

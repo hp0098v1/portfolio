@@ -22,6 +22,7 @@ export const socialLinks = {
   twitter: 'https://twitter.com/yourusername',
   email: 'hp0098v1@gmail.com',
   location: 'Golestan, Iran',
+  phone: '+989115312456',
 };
 
 export const skills = {

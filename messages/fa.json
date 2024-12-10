@@ -1,4 +1,220 @@
 {
+  "metadata": {
+    "default": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "توسعه دهنده Frontend متخصص در ایجاد تجربیات دیجیتال استثنایی با فناوری های مدرن وب.",
+      "keywords": "Erfan Paya, Frontend Developer, Web Developer, React, Next.js, TypeScript"
+    },
+    "home": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "به پورتفولیو من خوش آمدید. من Erfan Paya هستم، توسعه دهنده Frontend با علاقه به ایجاد تجربیات دیجیتال مدرن."
+    },
+    "about": {
+      "title": "About",
+      "description": "بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "با من تماس بگیرید. بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    },
+    "notFound": {
+      "title": "404 صفحه یافت نشد",
+      "description": "صفحه ای که به دنبال آن هستید وجود ندارد."
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "title": "صفحه یافت نشد",
+    "description": "صفحه ای که به دنبال آن هستید وجود ندارد یا منتقل شده است.",
+    "backToHome": "بازگشت به صفحه اصلی"
+  },
+  "error": {
+    "code": "خطا",
+    "title": "مشکلی رخ داده است",
+    "description": "یک مشکل بدون مقدمه ای رخ داده است. لطفا دوباره تلاش کنید.",
+    "tryAgain": "تلاش مجدد",
+    "returnHome": "بازگشت به صفحه اصلی"
+  },
+  "home": {
+    "hero": {
+      "title": "توسعه دهنده فرانت اند",
+      "description": "من تجربه و علاقه به ایجاد تجربیات دیجیتال مدرن با فناوری های مدرن وب را دارم"
+    },
+    "about": {
+      "title": "درباره من",
+      "description": "من یک توسعه‌دهنده پرشور ظاهری هستم که به طراحی و تعهد به ایجاد تجربیات بصری کاربر علاقه دارم. با پایه ای قوی در فناوری های مدرن وب، ایده ها را به کد تمیز، کارآمد و مقیاس پذیر تبدیل می کنم.",
+      "link": "بیشتر بدانید"
+    },
+    "projects": {
+      "title": "پروژه ها",
+      "link": "همه پروژه ها"
+    },
+    "contact": {
+      "title": "تماس با من"
+    }
+  },
+  "about": {
+    "title": "درباره من",
+    "background": {
+      "title": "پس زمینه",
+      "description": [
+        "من یک توسعه دهنده فرانت اند با سابقه سالها در ایجاد تجربیات دیجیتال مدرن وب هستم. من با علاقه به فناوری های مدرن وب شروع کردم و به عمق در عالم توسعه فرانت اند عمیقاً پیوستم.",
+        "من در ساختن رابط‌های پاسخگو و کاربرپسند با استفاده از فناوری‌های مدرن مانند React، Next.js و TypeScript تخصص دارم. من به خصوص به ایجاد تجربیات کاربر بدون درز و بهینه سازی عملکرد وب علاقه مند هستم."
+      ]
+    },
+    "experience": {
+      "title": "تجربه",
+      "items": [
+        {
+          "title": "توسعه دهنده فرانت اند",
+          "companyName": "به صورت فریلنسر",
+          "startDate": "1403-07",
+          "endDate": "1403-09",
+          "responsibilities": [
+            "برنامه های وب با تاثیر بالا را توسعه داد",
+            "منتوری برای توسعه دهندگان جوان و ارزیابی کد",
+            "پیاده سازی روش های بهتر و مدرن توسعه"
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "companyName": "Orbyx Team",
+          "startDate": "1403-04",
+          "endDate": "1403-06",
+          "responsibilities": [
+            "برنامه های وب با تاثیر بالا را توسعه داد",
+            "منتوری برای توسعه دهندگان جوان و ارزیابی کد",
+            "پیاده سازی روش های بهتر و مدرن توسعه"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "مهارت ها",
+      "languages": {
+        "title": "زبان های برنامه نویسی",
+        "items": ["JavaScript", "TypeScript", "HTML5", "CSS3"]
+      },
+      "frameworks": {
+        "title": "فریم ورک ها و کتابخانه ها",
+        "items": [
+          "React.js",
+          "Next.js",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Material UI"
+        ]
+      },
+      "tools": {
+        "title": "ابزارها",
+        "items": ["Git", "GitHub", "VS Code", "Vim", "Figma", "Docker"]
+      },
+      "databases": {
+        "title": "دیتابیس ها",
+        "items": ["MongoDB", "PostgreSQL"]
+      },
+      "other": {
+        "title": "سایر مهارت ها",
+        "items": [
+          "RESTful APIs",
+          "GraphQL",
+          "Responsive Design",
+          "UI/UX Design",
+          "Agile/Scrum",
+          "Testing (Jest)"
+        ]
+      }
+    },
+    "education": {
+      "title": "تحصیلات",
+      "items": [
+        {
+          "degree": "کارشناسی مهندسی کامپیوتر",
+          "university": "دانشگاه محمود آباد (مازندران)",
+          "startDate": "1400",
+          "endDate": "present",
+          "description": "متمرکز بر توسعه نرم افزار و فناوری های مدرن وب. عضو شدن در پروژه های برنامه نویسی و مسابقات."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "پروژه ها",
+    "techTitle": "فناوری های استفاده شده",
+    "featuresTitle": "ویژگی ها",
+    "backToProjects": "← بازگشت به پروژه ها",
+    "github": "گیت هاب",
+    "liveDemo": "نمایش زنده",
+    "viewDetails": "نمایش جزئیات",
+    "items": [
+      {
+        "slug": "modern-ecommerce",
+        "title": "فروشگاه الکترونیکی مدرن",
+        "description": "یک فروشگاه الکترونیکی کاملا مدرن با استفاده از Next.js و TypeScript",
+        "longDescription": "یک راه حل جامع تجارت الکترونیک که شامل احراز هویت کاربر، مدیریت محصول، عملکرد سبد خرید و پردازش پرداخت امن است. با در نظر گرفتن عملکرد و مقیاس پذیری ساخته شده است.",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
+        "image": "/project.png",
+        "features": [
+          "احراز هویت و مجوز کاربر",
+          "جستجو و فیلتر محصول",
+          "سبد خرید و لیست علاقه مندی ها",
+          "پردازش پرداخت امن"
+        ],
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "slug": "task-management",
+        "title": "برنامه مدیریت کار",
+        "description": "یک برنامه مدیریت کار مشترک با به روز رسانی در زمان واقعی",
+        "longDescription": "یک برنامه مدیریت کار در زمان واقعی که به تیم ها اجازه می دهد تا به طور موثر همکاری کنند. ویژگی ها شامل به روز رسانی در زمان واقعی، تعیین تکلیف، ردیابی پیشرفت و ارتباطات تیمی است.",
+        "tech": ["React", "Firebase", "Tailwind CSS", "Socket.io"],
+        "image": "/project.png",
+        "features": [
+          "همکاری در زمان واقعی",
+          "تکالیف و ردیابی",
+          "عملکرد چت تیمی",
+          "اشتراک گذاری فایل",
+          "تحلیل پیشرفت"
+        ],
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "slug": "portfolio",
+        "title": "وب سایت نمونه کارها",
+        "description": "یک وب سایت نمونه کارها مینیمال و مدرن که کارهای من را به نمایش می گذارد",
+        "longDescription": "یک وب سایت نمونه کار شخصی که با فناوری های مدرن وب ساخته شده است. دارای طراحی تمیز و مینیمال با انیمیشن های روان و چیدمان پاسخگو.",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+        "image": "/project.png",
+        "features": [
+          "طراحی واکنشگرا",
+          "حالت تاریک",
+          "انیمیشن های روان",
+          "فرم تماس",
+          "ویترین پروژه"
+        ],
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": "تماس با من"
+  },
   "shared": {
     "languageSwitcher": {
       "english": "انگلیسی",
@@ -10,9 +226,35 @@
         "projects": "پروژه ها",
         "contact": "تماس با من"
       }
+    },
+    "socialLinks": {
+      "github": "گیت هاب",
+      "linkedin": "لینکدین",
+      "email": "ایمیل"
+    },
+    "contact": {
+      "connectWithMe": {
+        "title": "ارتباط با من"
+      },
+      "contactInformation": {
+        "title": "اطلاعات تماس",
+        "email": "ایمیل",
+        "emailValue": "hp0098v1@gmail.com",
+        "location": "مکان",
+        "locationValue": "گلستان, ایران",
+        "phone": "تلفن",
+        "phoneValue": "+98 911 531 2456",
+        "availableForRemoteWork": "در دسترس برای کار ریموت"
+      },
+      "contactForm": {
+        "title": "ارسال پیام",
+        "description": "من به زودی به شما پاسخ می دهم",
+        "name": "نام",
+        "email": "ایمیل",
+        "subject": "موضوع",
+        "message": "پیام",
+        "submitBtn": "ارسال پیام"
+      }
     }
-  },
-  "LocaleLayout": {
-    "title": "next-intl example"
   }
 }

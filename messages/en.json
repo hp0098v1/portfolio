@@ -1,4 +1,224 @@
 {
+  "metadata": {
+    "default": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "Frontend Developer specializing in building exceptional digital experiences with modern web technologies.",
+      "keywords": "Erfan Paya, Frontend Developer, Web Developer, React, Next.js, TypeScript"
+    },
+    "home": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "Welcome to my portfolio. I'm Erfan Paya, a Frontend Developer passionate about creating modern web experiences."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about Erfan Paya, a Frontend Developer with expertise in React, Next.js, and modern web technologies."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with Erfan Paya. Let's discuss your next web project or potential collaboration opportunities."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore my latest web development projects and technical work."
+    },
+    "notFound": {
+      "title": "404 Page Not Found",
+      "description": "The page you are looking for does not exist."
+    },
+    "error": {
+      "title": "Error",
+      "description": "An unexpected error occurred on the server."
+    }
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backToHome": "Back to Home"
+  },
+  "error": {
+    "code": "Error",
+    "title": "Something went wrong!",
+    "description": "An unexpected error has occurred. Please try again later.",
+    "tryAgain": "Try Again",
+    "returnHome": "Return Home"
+  },
+  "home": {
+    "hero": {
+      "title": "Frontend Developer",
+      "description": "I craft responsive and performant web applications with modern technologies"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I'm a passionate frontend developer with a keen eye for design and a commitment to creating intuitive user experiences. With a strong foundation in modern web technologies, I transform ideas into clean, efficient, and scalable code.",
+      "link": "Read More"
+    },
+    "projects": {
+      "title": "Projects",
+      "link": "View All"
+    },
+    "contact": {
+      "title": "Get in Touch"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "background": {
+      "title": "Background",
+      "description": [
+        "I'm a passionate frontend developer with several years of experience in creating modern web applications. My journey in web development started with a curiosity about how websites work, which led me to dive deep into the world of frontend development.",
+        "I specialize in building responsive, user-friendly interfaces using modern technologies like React, Next.js, and TypeScript. I'm particularly interested in creating seamless user experiences and optimizing web performance."
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "title": "Frontend Developer",
+          "companyName": "as Freelancer",
+          "startDate": "2024-09",
+          "endDate": "2024-11",
+          "responsibilities": [
+            "Led the development of multiple high-impact web applications",
+            "Mentored junior developers and conducted code reviews",
+            "Implemented best practices and modern development workflows"
+          ]
+        },
+        {
+          "title": "Frontend Developer",
+          "companyName": "Orbyx Team",
+          "startDate": "2024-06",
+          "endDate": "2024-08",
+          "responsibilities": [
+            "Developed responsive web applications using React and TypeScript",
+            "Collaborated with designers to implement pixel-perfect designs",
+            "Improved site performance and SEO"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "languages": {
+        "title": "Programming Languages",
+        "items": ["JavaScript", "TypeScript", "HTML5", "CSS3"]
+      },
+      "frameworks": {
+        "title": "Frameworks & Libraries",
+        "items": [
+          "React.js",
+          "Next.js",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Tailwind CSS",
+          "Shadcn UI",
+          "Material UI"
+        ]
+      },
+      "tools": {
+        "title": "Tools",
+        "items": ["Git", "GitHub", "VS Code", "Vim", "Figma", "Docker"]
+      },
+      "databases": {
+        "title": "Databases",
+        "items": ["MongoDB", "PostgreSQL"]
+      },
+      "other": {
+        "title": "Other Skills",
+        "items": [
+          "RESTful APIs",
+          "GraphQL",
+          "Responsive Design",
+          "UI/UX Design",
+          "Agile/Scrum",
+          "Testing (Jest)"
+        ]
+      }
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "degree": "Bachelor of Computer Engineering",
+          "university": "MahmooadAbad (Mazndaran) University",
+          "startDate": "2021",
+          "endDate": "present",
+          "description": "Focused on software development and web technologies. Participated in various programming projects and competitions."
+        }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "techTitle": "Technologies Used",
+    "featuresTitle": "Key Features",
+    "backToProjects": "← Back to Projects",
+    "github": "GitHub",
+    "liveDemo": "Live Demo",
+    "viewDetails": "View Details",
+    "items": [
+      {
+        "slug": "modern-ecommerce",
+        "title": "Modern E-commerce",
+        "description": "A full-featured e-commerce platform built with Next.js and TypeScript",
+        "longDescription": "A comprehensive e-commerce solution featuring user authentication, product management, shopping cart functionality, and secure payment processing. Built with performance and scalability in mind.",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
+        "image": "/project.png",
+        "features": [
+          "User authentication and authorization",
+          "Product search and filtering",
+          "Shopping cart and wishlist",
+          "Secure payment processing"
+        ],
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "slug": "task-management",
+        "title": "Task Management App",
+        "description": "A collaborative task management application with real-time updates",
+        "longDescription": "A real-time task management application that allows teams to collaborate effectively. Features include real-time updates, task assignment, progress tracking, and team communication.",
+        "tech": ["React", "Firebase", "Tailwind CSS", "Socket.io"],
+        "image": "/project.png",
+        "features": [
+          "Real-time collaboration",
+          "Task assignment and tracking",
+          "Team chat functionality",
+          "File sharing",
+          "Progress analytics"
+        ],
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
+      },
+      {
+        "slug": "portfolio",
+        "title": "Portfolio Website",
+        "description": "A minimal and modern portfolio website showcasing my work",
+        "longDescription": "A personal portfolio website built with modern web technologies. Features a clean, minimal design with smooth animations and responsive layout.",
+        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+        "image": "/project.png",
+        "features": [
+          "Responsive design",
+          "Dark mode",
+          "Smooth animations",
+          "Contact form",
+          "Project showcase"
+        ],
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me"
+  },
   "shared": {
     "languageSwitcher": {
       "english": "English",
@@ -10,9 +230,35 @@
         "projects": "Projects",
         "contact": "Contact"
       }
+    },
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "contact": {
+      "connectWithMe": {
+        "title": "Connect With Me"
+      },
+      "contactInformation": {
+        "title": "Contact Information",
+        "email": "Email",
+        "emailValue": "hp0098v1@gmail.com",
+        "location": "Location",
+        "locationValue": "Golestan, Iran",
+        "phone": "Phone",
+        "phoneValue": "+98 911 531 2456",
+        "availableForRemoteWork": "Available for Remote Work"
+      },
+      "contactForm": {
+        "title": "Send a Message",
+        "description": "I'll get back to you as soon as possible",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submitBtn": "Send Message"
+      }
     }
-  },
-  "LocaleLayout": {
-    "title": "next-intl example"
   }
 }
