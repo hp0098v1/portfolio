@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-import BaseLayout from '@/components/shared/base-layout';
+import { BaseLayout } from '@/components/shared/base-layout';
 import { routing } from '@/i18n/routing';
 
 type Props = {

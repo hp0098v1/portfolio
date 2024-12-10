@@ -20,49 +20,24 @@
     "projects": {
       "title": "Projects",
       "description": "بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    },
+    "notFound": {
+      "title": "404 صفحه یافت نشد",
+      "description": "صفحه ای که به دنبال آن هستید وجود ندارد."
     }
   },
-  "shared": {
-    "languageSwitcher": {
-      "english": "انگلیسی",
-      "persian": "فارسی"
-    },
-    "navbar": {
-      "links": {
-        "about": "درباره من",
-        "projects": "پروژه ها",
-        "contact": "تماس با من"
-      }
-    },
-    "socialLinks": {
-      "github": "گیت هاب",
-      "linkedin": "لینکدین",
-      "email": "ایمیل"
-    },
-    "contact": {
-      "connectWithMe": {
-        "title": "ارتباط با من"
-      },
-      "contactInformation": {
-        "title": "اطلاعات تماس",
-        "email": "ایمیل",
-        "emailValue": "hp0098v1@gmail.com",
-        "location": "مکان",
-        "locationValue": "گلستان, ایران",
-        "phone": "تلفن",
-        "phoneValue": "+98 911 531 2456",
-        "availableForRemoteWork": "در دسترس برای کار ریموت"
-      },
-      "contactForm": {
-        "title": "ارسال پیام",
-        "description": "من به زودی به شما پاسخ می دهم",
-        "name": "نام",
-        "email": "ایمیل",
-        "subject": "موضوع",
-        "message": "پیام",
-        "submitBtn": "ارسال پیام"
-      }
-    }
+  "notFound": {
+    "code": "404",
+    "title": "صفحه یافت نشد",
+    "description": "صفحه ای که به دنبال آن هستید وجود ندارد یا منتقل شده است.",
+    "backToHome": "بازگشت به صفحه اصلی"
+  },
+  "error": {
+    "code": "خطا",
+    "title": "مشکلی رخ داده است",
+    "description": "یک مشکل بدون مقدمه ای رخ داده است. لطفا دوباره تلاش کنید.",
+    "tryAgain": "تلاش مجدد",
+    "returnHome": "بازگشت به صفحه اصلی"
   },
   "home": {
     "hero": {
@@ -236,5 +211,47 @@
         }
       }
     ]
+  },
+  "shared": {
+    "languageSwitcher": {
+      "english": "انگلیسی",
+      "persian": "فارسی"
+    },
+    "navbar": {
+      "links": {
+        "about": "درباره من",
+        "projects": "پروژه ها",
+        "contact": "تماس با من"
+      }
+    },
+    "socialLinks": {
+      "github": "گیت هاب",
+      "linkedin": "لینکدین",
+      "email": "ایمیل"
+    },
+    "contact": {
+      "connectWithMe": {
+        "title": "ارتباط با من"
+      },
+      "contactInformation": {
+        "title": "اطلاعات تماس",
+        "email": "ایمیل",
+        "emailValue": "hp0098v1@gmail.com",
+        "location": "مکان",
+        "locationValue": "گلستان, ایران",
+        "phone": "تلفن",
+        "phoneValue": "+98 911 531 2456",
+        "availableForRemoteWork": "در دسترس برای کار ریموت"
+      },
+      "contactForm": {
+        "title": "ارسال پیام",
+        "description": "من به زودی به شما پاسخ می دهم",
+        "name": "نام",
+        "email": "ایمیل",
+        "subject": "موضوع",
+        "message": "پیام",
+        "submitBtn": "ارسال پیام"
+      }
+    }
   }
 }

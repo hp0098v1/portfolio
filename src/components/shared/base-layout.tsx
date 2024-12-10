@@ -18,7 +18,7 @@ type Props = {
   locale: string;
 };
 
-export default async function BaseLayout({ children, locale }: Props) {
+export async function BaseLayout({ children, locale }: Props) {
   const messages = await getMessages();
 
   return (
