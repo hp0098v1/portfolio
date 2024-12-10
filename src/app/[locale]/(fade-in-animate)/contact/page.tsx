@@ -1,8 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
-import { ContactInformation } from '@/app/[locale]/(fade-in-animate)/contact/_components/contact-information';
-import { SocialLinks } from '@/app/[locale]/(fade-in-animate)/contact/_components/social-links';
+import { ConnectWithMe } from '@/components/shared/connect-with-me';
 import { ContactForm } from '@/components/shared/contact-form';
+import { ContactInformation } from '@/components/shared/contact-information';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -28,7 +28,7 @@ export default async function ContactPage() {
           <div className='space-y-8'>
             <ContactInformation />
 
-            <SocialLinks />
+            <ConnectWithMe />
           </div>
 
           <ContactForm />

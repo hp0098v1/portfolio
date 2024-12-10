@@ -1,4 +1,5 @@
 'use client';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -14,6 +15,8 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 
 export function ContactForm() {
+  const t = useTranslations('shared.contact.contactForm');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -40,15 +43,13 @@ export function ContactForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className='text-2xl font-bold'>Send a Message</CardTitle>
-        <CardDescription>
-          I&apos;ll get back to you as soon as possible
-        </CardDescription>
+        <CardTitle className='text-2xl font-bold'>{t('title')}</CardTitle>
+        <CardDescription>{t('description')}</CardDescription>
       </CardHeader>
       <CardContent>
         <form className='space-y-4' onSubmit={handleSubmit}>
           <div className='space-y-2'>
-            <Label htmlFor='name'>Name</Label>
+            <Label htmlFor='name'>{t('name')}</Label>
             <Input
               required
               id='name'
@@ -59,7 +60,7 @@ export function ContactForm() {
           </div>
 
           <div className='space-y-2'>
-            <Label htmlFor='email'>Email</Label>
+            <Label htmlFor='email'>{t('email')}</Label>
             <Input
               required
               id='email'
@@ -71,7 +72,7 @@ export function ContactForm() {
           </div>
 
           <div className='space-y-2'>
-            <Label htmlFor='subject'>Subject</Label>
+            <Label htmlFor='subject'>{t('subject')}</Label>
             <Input
               required
               id='subject'
@@ -82,7 +83,7 @@ export function ContactForm() {
           </div>
 
           <div className='space-y-2'>
-            <Label htmlFor='message'>Message</Label>
+            <Label htmlFor='message'>{t('message')}</Label>
             <Textarea
               required
               id='message'
@@ -94,7 +95,7 @@ export function ContactForm() {
           </div>
 
           <Button className='w-full' type='submit'>
-            Send Message
+            {t('submitBtn')}
           </Button>
         </form>
       </CardContent>

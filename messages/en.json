@@ -33,6 +33,53 @@
         "projects": "Projects",
         "contact": "Contact"
       }
+    },
+    "socialLinks": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "contact": {
+      "connectWithMe": {
+        "title": "Connect With Me"
+      },
+      "contactInformation": {
+        "title": "Contact Information",
+        "email": "Email",
+        "emailValue": "hp0098v1@gmail.com",
+        "location": "Location",
+        "locationValue": "Golestan, Iran",
+        "phone": "Phone",
+        "phoneValue": "+98 911 531 2456",
+        "availableForRemoteWork": "Available for Remote Work"
+      },
+      "contactForm": {
+        "title": "Send a Message",
+        "description": "I'll get back to you as soon as possible",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "submitBtn": "Send Message"
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Frontend Developer",
+      "description": "I craft responsive and performant web applications with modern technologies"
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I'm a passionate frontend developer with a keen eye for design and a commitment to creating intuitive user experiences. With a strong foundation in modern web technologies, I transform ideas into clean, efficient, and scalable code.",
+      "link": "Read More"
+    },
+    "projects": {
+      "title": "Projects",
+      "link": "View All"
+    },
+    "contact": {
+      "title": "Get in Touch"
     }
   }
 }

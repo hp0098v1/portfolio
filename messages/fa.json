@@ -33,9 +33,53 @@
         "projects": "پروژه ها",
         "contact": "تماس با من"
       }
+    },
+    "socialLinks": {
+      "github": "گیت هاب",
+      "linkedin": "لینکدین",
+      "email": "ایمیل"
+    },
+    "contact": {
+      "connectWithMe": {
+        "title": "ارتباط با من"
+      },
+      "contactInformation": {
+        "title": "اطلاعات تماس",
+        "email": "ایمیل",
+        "emailValue": "hp0098v1@gmail.com",
+        "location": "مکان",
+        "locationValue": "گلستان, ایران",
+        "phone": "تلفن",
+        "phoneValue": "+98 911 531 2456",
+        "availableForRemoteWork": "در دسترس برای کار ریموت"
+      },
+      "contactForm": {
+        "title": "ارسال پیام",
+        "description": "من به زودی به شما پاسخ می دهم",
+        "name": "نام",
+        "email": "ایمیل",
+        "subject": "موضوع",
+        "message": "پیام",
+        "submitBtn": "ارسال پیام"
+      }
     }
   },
-  "LocaleLayout": {
-    "title": "next-intl example"
+  "home": {
+    "hero": {
+      "title": "توسعه دهنده فرانت اند",
+      "description": "من تجربه و علاقه به ایجاد تجربیات دیجیتال مدرن با فناوری های مدرن وب را دارم"
+    },
+    "about": {
+      "title": "درباره من",
+      "description": "من یک توسعه‌دهنده پرشور ظاهری هستم که به طراحی و تعهد به ایجاد تجربیات بصری کاربر علاقه دارم. با پایه ای قوی در فناوری های مدرن وب، ایده ها را به کد تمیز، کارآمد و مقیاس پذیر تبدیل می کنم.",
+      "link": "بیشتر بدانید"
+    },
+    "projects": {
+      "title": "پروژه ها",
+      "link": "همه پروژه ها"
+    },
+    "contact": {
+      "title": "تماس با من"
+    }
   }
 }

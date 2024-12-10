@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,13 +13,15 @@ import { projects } from '@/constants';
 import { Link } from '@/i18n/routing';
 
 export function ProjectsPreview() {
+  const t = useTranslations('home.projects');
+
   return (
     <section className='px-4 py-20'>
       <div className='mx-auto max-w-4xl'>
         <div className='mb-8 flex items-center justify-between'>
-          <h2 className='text-3xl font-bold'>Projects</h2>
+          <h2 className='text-3xl font-bold'>{t('title')}</h2>
           <Button asChild variant='link'>
-            <Link href='/projects'>View all projects →</Link>
+            <Link href='/projects'>{t('link')}</Link>
           </Button>
         </div>
         <div className='grid gap-6 md:grid-cols-2'>
