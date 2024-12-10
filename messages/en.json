@@ -1,4 +1,27 @@
 {
+  "metadata": {
+    "default": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "Frontend Developer specializing in building exceptional digital experiences with modern web technologies.",
+      "keywords": "Erfan Paya, Frontend Developer, Web Developer, React, Next.js, TypeScript"
+    },
+    "home": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "Welcome to my portfolio. I'm Erfan Paya, a Frontend Developer passionate about creating modern web experiences."
+    },
+    "about": {
+      "title": "About",
+      "description": "Learn more about Erfan Paya, a Frontend Developer with expertise in React, Next.js, and modern web technologies."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with Erfan Paya. Let's discuss your next web project or potential collaboration opportunities."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore my latest web development projects and technical work."
+    }
+  },
   "shared": {
     "languageSwitcher": {
       "english": "English",
@@ -11,8 +34,5 @@
         "contact": "Contact"
       }
     }
-  },
-  "LocaleLayout": {
-    "title": "next-intl example"
   }
 }

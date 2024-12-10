@@ -15,10 +15,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Omit<Props, 'children'>) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
+  const t = await getTranslations({ locale, namespace: 'metadata.default' });
 
   return {
-    title: t('title'),
+    title: {
+      template: '%s | Erfan Paya',
+      default: t('title'),
+    },
+    description: t('description'),
+    keywords: t('keywords'),
   };
 }
 

@@ -1,4 +1,27 @@
 {
+  "metadata": {
+    "default": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "توسعه دهنده Frontend متخصص در ایجاد تجربیات دیجیتال استثنایی با فناوری های مدرن وب.",
+      "keywords": "Erfan Paya, Frontend Developer, Web Developer, React, Next.js, TypeScript"
+    },
+    "home": {
+      "title": "Erfan Paya | Frontend Developer",
+      "description": "به پورتفولیو من خوش آمدید. من Erfan Paya هستم، توسعه دهنده Frontend با علاقه به ایجاد تجربیات دیجیتال مدرن."
+    },
+    "about": {
+      "title": "About",
+      "description": "بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "با من تماس بگیرید. بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "بیشتر بدانید درباره من، توسعه دهنده Frontend با تخصص در React, Next.js و فناوری های مدرن وب."
+    }
+  },
   "shared": {
     "languageSwitcher": {
       "english": "انگلیسی",

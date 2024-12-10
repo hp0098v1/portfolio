@@ -1,6 +1,7 @@
 import { Github, Monitor } from 'lucide-react';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
+import { getTranslations } from 'next-intl/server';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,25 @@ export function generateStaticParams() {
   return projects.map(project => ({
     id: project.id,
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; id: string }>;
+}) {
+  const { locale, id } = await params;
+  const t = await getTranslations({ locale, namespace: 'metadata' });
+
+  // TODO:Fetch project data based on slug
+  // const project = await getProject(id);
+  console.log(id, t('default.title'));
+
+  return {
+    title: `PROJECT TITLE`,
+    description: `PROJECT DESCRIPTION`,
+    // ... other metadata
+  };
 }
 
 export default async function ProjectPage({
