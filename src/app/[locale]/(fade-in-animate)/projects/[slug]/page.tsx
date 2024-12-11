@@ -35,7 +35,7 @@ export default async function ProjectPage({ params }: Props) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'projects' });
 
-  const project = t
+  const project: ProjectType = t
     .raw('items')
     .find((project: ProjectType) => project.slug === slug);
 
@@ -46,21 +46,27 @@ export default async function ProjectPage({ params }: Props) {
   return (
     <main className='min-h-screen px-4 py-20'>
       <div className='mx-auto max-w-4xl'>
-        <Link
-          className='mb-8 inline-block text-primary underline-offset-4 hover:underline'
-          href='/projects'
-        >
-          {t('backToProjects')}
-        </Link>
+        <div className='mb-8 flex items-center justify-between gap-2'>
+          <Link
+            className='inline-block text-primary underline-offset-4 hover:underline'
+            href='/projects'
+          >
+            {t('backToProjects')}
+          </Link>
 
-        <div className='relative mb-8 h-96 w-full md:h-[34rem]'>
-          <Image
-            fill
-            alt={project.title}
-            className='rounded-lg object-cover object-center shadow-lg'
-            src={project.image}
-          />
+          <Badge>{project.client}</Badge>
         </div>
+
+        {project.image !== null && (
+          <div className='relative mb-8 h-96 w-full md:h-[34rem]'>
+            <Image
+              fill
+              alt={project.title}
+              className='rounded-lg object-cover object-center shadow-lg'
+              src={project.image}
+            />
+          </div>
+        )}
 
         <h1 className='mb-6 text-4xl font-bold'>{project.title}</h1>
         <p className='mb-8 text-xl text-muted-foreground'>
@@ -93,6 +99,8 @@ export default async function ProjectPage({ params }: Props) {
 
         <ProjectLinks
           links={project.links}
+          showGithub={!project.privateSource}
+          showLiveDemo={!project.privateDemo}
           showViewDetails={false}
           slug={project.slug}
         />

@@ -7,14 +7,18 @@ export type Project = {
   title: string;
   description: string;
   longDescription: string;
+  client: string;
   tech: string[];
-  image: string;
+  image: string | null;
   features: string[];
   links: {
     github: string;
     live: string;
   };
+  privateSource: boolean;
+  privateDemo: boolean;
 };
+
 type Props = {
   params: Promise<{ locale: string }>;
 };
@@ -40,9 +44,12 @@ export default async function ProjectsPage({ params }: Props) {
         <div className='grid gap-8'>
           {t.raw('items').map((project: Project) => (
             <ProjectCard
+              client={project.client}
               description={project.description}
               key={`project-${project.slug}`}
               links={project.links}
+              privateDemo={project.privateDemo}
+              privateSource={project.privateSource}
               slug={project.slug}
               tech={project.tech}
               title={project.title}
