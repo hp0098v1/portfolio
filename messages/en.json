@@ -112,6 +112,7 @@
           "Zustand",
           "React Query",
           "React Hook Form",
+          "Zod",
           "Tailwind CSS",
           "Shadcn UI",
           "Material UI"
@@ -160,59 +161,127 @@
     "viewDetails": "View Details",
     "items": [
       {
-        "slug": "modern-ecommerce",
-        "title": "Modern E-commerce",
-        "description": "A full-featured e-commerce platform built with Next.js and TypeScript",
-        "longDescription": "A comprehensive e-commerce solution featuring user authentication, product management, shopping cart functionality, and secure payment processing. Built with performance and scalability in mind.",
-        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-        "image": "/project.png",
+        "slug": "snapgram",
+        "title": "Snapgram (Social Media)",
+        "description": "A social media platform built with React.js and TypeScript",
+        "longDescription": "A modern social app with a stunning UI with a native mobile feel, a special tech stack, an infinite scroll feature, and amazing performance using React JS, Appwrite, TypeScript, and more.",
+        "client": "Personal",
+        "privateSource": false,
+        "privateDemo": false,
+        "tech": [
+          "React.js",
+          "TypeScript",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Zod",
+          "Tailwind CSS",
+          "Shadcn UI"
+        ],
+        "image": "/images/projects/snapgram.png",
+        "features": [
+          "User authentication and authorization",
+          "User Profile",
+          "Users Search",
+          "Post creation and editing and deleting",
+          "Saving Favorite Posts",
+          "Liking and Disliking Posts",
+          "Infinite scroll"
+        ],
+        "links": {
+          "github": "https://github.com/hp0098v1/snapgram",
+          "live": "https://snapgram-hp0098v1.vercel.app/"
+        }
+      },
+      {
+        "slug": "kalin-lash",
+        "title": "Kalin Lash (E-commerce)",
+        "description": "A full-featured e-commerce platform built with React.js and TypeScript",
+        "longDescription": "A modern e-commerce website featuring advanced product search, smart categorization, a user-friendly shopping cart, and a secure payment system. The website also includes a blog section to provide valuable and relevant content to users. My role in this project involved designing and developing the core functionalities using React and TypeScript. The main goal was to deliver a simple and enjoyable online shopping experience for users.",
+        "client": "Orbyx Team",
+        "privateSource": true,
+        "privateDemo": false,
+        "tech": [
+          "React.js",
+          "TypeScript",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Zod",
+          "Tailwind CSS",
+          "Mantine"
+        ],
+        "image": "/images/projects/kalin-lash.png",
         "features": [
           "User authentication and authorization",
           "Product search and filtering",
+          "Product categories",
+          "Blog",
           "Shopping cart and wishlist",
           "Secure payment processing"
         ],
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "",
+          "live": "https://kalinlash.com/"
         }
       },
       {
-        "slug": "task-management",
-        "title": "Task Management App",
-        "description": "A collaborative task management application with real-time updates",
-        "longDescription": "A real-time task management application that allows teams to collaborate effectively. Features include real-time updates, task assignment, progress tracking, and team communication.",
-        "tech": ["React", "Firebase", "Tailwind CSS", "Socket.io"],
-        "image": "/project.png",
+        "slug": "hakar",
+        "title": "Hakar (Entrepreneurship services)",
+        "description": "A platform for finding entrepreneurship services",
+        "longDescription": "A social media website featuring a sleek, minimalist design and an immersive mobile-app-like experience. Key features include infinite scrolling for seamless content viewing, optimized performance, and an engaging user experience. This project was built as a portfolio showcase, leveraging modern technologies like React.js, Appwrite, TypeScript, and other advanced tools. My role involved designing and developing the user interface and implementing functional logic with a strong focus on delivering a smooth user experience.",
+        "client": "Orbyx Team",
+        "privateSource": true,
+        "privateDemo": false,
+        "tech": [
+          "React.js",
+          "TypeScript",
+          "Zustand",
+          "React Query",
+          "React Hook Form",
+          "Zod",
+          "Tailwind CSS",
+          "Shadcn UI"
+        ],
+        "image": "/images/projects/hakar.png",
         "features": [
-          "Real-time collaboration",
-          "Task assignment and tracking",
-          "Team chat functionality",
-          "File sharing",
-          "Progress analytics"
+          "User authentication and authorization",
+          "Entrepreneurship services",
+          "Receiving facilities",
+          "Holding various events"
         ],
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "",
+          "live": "https://hakar.ir/"
         }
       },
       {
-        "slug": "portfolio",
-        "title": "Portfolio Website",
-        "description": "A minimal and modern portfolio website showcasing my work",
-        "longDescription": "A personal portfolio website built with modern web technologies. Features a clean, minimal design with smooth animations and responsive layout.",
-        "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-        "image": "/project.png",
+        "slug": "icl",
+        "title": "ICL (analyzing chats of depressed people)",
+        "description": "A website for analyzing chats of depressed people",
+        "longDescription": "A website designed to analyze conversations of depressed individuals, allowing trainees to review chats and generate detailed reports on the causes and reasons for depression. These reports are stored and analyzed to aid in the development of artificial intelligence models. I was responsible for designing the entire UI/UX of the website from scratch, implementing core functionalities such as chat review, report creation, and data storage, and ensuring optimal performance and scalability using Next.js and TypeScript.",
+        "client": "TATC (Toronto Addication treatment Centres)",
+        "privateSource": true,
+        "privateDemo": true,
+        "tech": [
+          "Next.js",
+          "React.js",
+          "TypeScript",
+          "React Hook Form",
+          "Zod",
+          "Tailwind CSS",
+          "Shadcn UI"
+        ],
+        "image": null,
         "features": [
-          "Responsive design",
-          "Dark mode",
-          "Smooth animations",
-          "Contact form",
-          "Project showcase"
+          "User authentication and authorization",
+          "Conversation analysis",
+          "Report creation",
+          "Dynamic Forms"
         ],
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "",
+          "live": ""
         }
       }
     ]
