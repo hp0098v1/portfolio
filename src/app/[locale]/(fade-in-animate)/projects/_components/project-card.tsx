@@ -54,7 +54,7 @@ export function ProjectCard({
         <ProjectLinks
           links={links}
           showGithub={!privateSource}
-          showLiveDemo={privateDemo}
+          showLiveDemo={!privateDemo}
           slug={slug}
         />
       </CardContent>

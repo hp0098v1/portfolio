@@ -47,11 +47,11 @@
   "home": {
     "hero": {
       "title": "Frontend Developer",
-      "description": "I craft responsive and performant web applications with modern technologies"
+      "description": "One of the creators of modern and beautiful websites with advanced programming technologies"
     },
     "about": {
       "title": "About Me",
-      "description": "I'm a passionate frontend developer with a keen eye for design and a commitment to creating intuitive user experiences. With a strong foundation in modern web technologies, I transform ideas into clean, efficient, and scalable code.",
+      "description": "I am a self-taught programmer who has been working in the front-end field for more than a year and has done various projects for individuals and teams. Because I love coding and programming, I am learning and improving my skills every day.",
       "link": "Read More"
     },
     "projects": {
@@ -67,8 +67,8 @@
     "background": {
       "title": "Background",
       "description": [
-        "I'm a passionate frontend developer with several years of experience in creating modern web applications. My journey in web development started with a curiosity about how websites work, which led me to dive deep into the world of frontend development.",
-        "I specialize in building responsive, user-friendly interfaces using modern technologies like React, Next.js, and TypeScript. I'm particularly interested in creating seamless user experiences and optimizing web performance."
+        "I am a self-taught programmer who has been working in the front-end field for more than a year and has done various projects for individuals and teams. Because I love coding and programming, I am learning and improving my skills every day.",
+        "My goal is to continue my professional path and work in different teams and companies. I like to face new challenges and experiences to both improve my skills and learn new things. I am always looking to learn and improve and I hope to be able to play a useful and influential role in different projects."
       ]
     },
     "experience": {
@@ -80,9 +80,10 @@
           "startDate": "2024-09",
           "endDate": "2024-11",
           "responsibilities": [
-            "Led the development of multiple high-impact web applications",
-            "Mentored junior developers and conducted code reviews",
-            "Implemented best practices and modern development workflows"
+            "Implementation of the icl project",
+            "Attendance at work meetings to advance project goals",
+            "Provide better and modern solutions to advance project goals",
+            "Deployment of the project in the host"
           ]
         },
         {
@@ -91,9 +92,10 @@
           "startDate": "2024-06",
           "endDate": "2024-08",
           "responsibilities": [
-            "Developed responsive web applications using React and TypeScript",
-            "Collaborated with designers to implement pixel-perfect designs",
-            "Improved site performance and SEO"
+            "Development of kalinlash and hakar platforms",
+            "Improvement of soft skills",
+            "Attendance at daily meetings and project reviews",
+            "Provide better and modern solutions to advance goals"
           ]
         }
       ]
@@ -146,7 +148,7 @@
           "university": "MahmooadAbad (Mazndaran) University",
           "startDate": "2021",
           "endDate": "present",
-          "description": "Focused on software development and web technologies. Participated in various programming projects and competitions."
+          "description": "I am currently studying at the National Vocational and Technical College, Mahmudabad, Boys' Branch."
         }
       ]
     }

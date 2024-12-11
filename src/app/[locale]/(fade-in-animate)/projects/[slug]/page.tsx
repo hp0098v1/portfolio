@@ -100,6 +100,7 @@ export default async function ProjectPage({ params }: Props) {
         <ProjectLinks
           links={project.links}
           showGithub={!project.privateSource}
+          showLiveDemo={!project.privateDemo}
           showViewDetails={false}
           slug={project.slug}
         />
