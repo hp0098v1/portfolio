@@ -1,4 +1,4 @@
-import { Space_Mono, Vazirmatn } from 'next/font/google';
+import { Space_Mono, Lalezar } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ReactNode } from 'react';
@@ -13,10 +13,11 @@ const spaceMono = Space_Mono({
   weight: ['400', '700'],
   variable: '--font-space-mono',
 });
-const vazirmatn = Vazirmatn({
+
+const lalezar = Lalezar({
   subsets: ['arabic'],
-  weight: ['400', '700'],
-  variable: '--font-vazirmatn',
+  weight: ['400'],
+  variable: '--font-lalezar',
 });
 
 type Props = {
@@ -36,7 +37,7 @@ export async function BaseLayout({ children, locale }: Props) {
       <body
         className={cn(
           spaceMono.variable,
-          vazirmatn.variable,
+          lalezar.variable,
           'flex h-full flex-col',
         )}
       >

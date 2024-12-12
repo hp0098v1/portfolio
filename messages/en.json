@@ -296,6 +296,13 @@
       "english": "English",
       "persian": "Persian"
     },
+    "downloadCv": {
+      "english": "(English)",
+      "persian": "(Persian)",
+      "download": "Download CV",
+      "error": "CV file not found or inaccessible",
+      "success": "CV file downloaded successfully"
+    },
     "navbar": {
       "links": {
         "about": "About",

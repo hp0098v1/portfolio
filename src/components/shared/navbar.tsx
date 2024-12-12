@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
+import { DownloadCv } from '@/components/shared/download-cv';
 import { LanguageSwitcher } from '@/components/shared/language-switcher';
 import { NavLink } from '@/components/shared/nav-link';
 import { ToggleTheme } from '@/components/shared/toggle-theme';
@@ -37,6 +38,7 @@ export function Navbar() {
             <div>
               <ToggleTheme />
               <LanguageSwitcher />
+              <DownloadCv />
             </div>
           </div>
 
@@ -44,6 +46,7 @@ export function Navbar() {
           <div className='md:hidden'>
             <ToggleTheme />
             <LanguageSwitcher />
+            <DownloadCv />
             <Button
               size='icon'
               variant='ghost'

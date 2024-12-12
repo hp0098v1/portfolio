@@ -14,10 +14,10 @@ export default {
       fontFamily: {
         'space-mono': [
           'var(--font-space-mono)',
-          'var(--font-vazirmatn)',
+          'var(--font-lalezar)',
           'monospace',
         ],
-        vazirmatn: ['var(--font-vazirmatn)', 'sans-serif'],
+        lalezar: ['var(--font-lalezar)', 'sans-serif'],
       },
       colors: {
         primary: {

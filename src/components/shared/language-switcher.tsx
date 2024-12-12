@@ -48,9 +48,19 @@ export function LanguageSwitcher() {
             onClick={() => onChange(locale)}
           >
             {locale === 'fa' ? (
-              <Image alt='Iran' height={20} src='/ir-flag.gif' width={20} />
+              <Image
+                alt='Iran'
+                height={20}
+                src='/images/flags/ir-flag.gif'
+                width={20}
+              />
             ) : (
-              <Image alt='English' height={20} src='/us-flag.gif' width={20} />
+              <Image
+                alt='English'
+                height={20}
+                src='/images/flags/us-flag.gif'
+                width={20}
+              />
             )}
             {locale === 'fa' ? 'فارسی' : 'English'}
           </DropdownMenuItem>
