@@ -26,8 +26,8 @@ export default async function AboutPage({ params }: Props) {
 
   return (
     <main className='mx-auto min-h-screen max-w-4xl px-4 py-20'>
-      <div className='flex items-start justify-between'>
-        <h1 className='mb-8 text-4xl font-bold'>{t('title')}</h1>
+      <div className='mb-8 flex flex-col items-start justify-between gap-4 sm:flex-row'>
+        <h1 className='text-4xl font-bold'>{t('title')}</h1>
         <DownloadCvBtns />
       </div>
 
